@@ -3,6 +3,7 @@ class_name ItemSlot
 
 @export var icon : TextureRect
 @export var item: ItemData
+@export var label : Label
 
 func _ready() -> void:
 	update_ui()
@@ -10,10 +11,13 @@ func _ready() -> void:
 func update_ui():
 	if not item:
 		icon.texture = null
+		label.text = ""
 		return
 		
 	icon.texture = item.icon
 	tooltip_text = item.item_name
+	label.text = item.value
+		
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if not item:

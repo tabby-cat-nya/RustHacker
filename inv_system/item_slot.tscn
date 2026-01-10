@@ -1,12 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgqs20xf7l8c"]
+[gd_scene load_steps=4 format=3 uid="uid://dgqs20xf7l8c"]
 
 [ext_resource type="Script" uid="uid://cpd04flfh5nlc" path="res://inv_system/item_slot.gd" id="1_m11ft"]
 [ext_resource type="Texture2D" uid="uid://b7jp850fqpa0j" path="res://icon.svg" id="3_0tnt0"]
 
-[node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon")]
+[sub_resource type="LabelSettings" id="LabelSettings_ab1u2"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon", "label")]
 custom_minimum_size = Vector2(64, 64)
 script = ExtResource("1_m11ft")
 icon = NodePath("Icon")
+label = NodePath("Icon/Label")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
@@ -21,3 +26,20 @@ grow_vertical = 2
 texture = ExtResource("3_0tnt0")
 expand_mode = 3
 stretch_mode = 4
+
+[node name="Label" type="Label" parent="Icon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -14.599998
+offset_right = 30.999998
+offset_bottom = 8.400002
+grow_horizontal = 2
+grow_vertical = 0
+text = "120 GB"
+label_settings = SubResource("LabelSettings_ab1u2")
+horizontal_alignment = 2

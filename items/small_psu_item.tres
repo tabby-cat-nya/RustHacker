@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://swd1m0hvep4c"]
+
+[ext_resource type="Texture2D" uid="uid://bmstxerbgdq61" path="res://assets/small psu.png" id="1_62foo"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_x1n7s"]
+
+[resource]
+script = ExtResource("2_x1n7s")
+item_name = "Small Power Supply Unit"
+icon = ExtResource("1_62foo")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
