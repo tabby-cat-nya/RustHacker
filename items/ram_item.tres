@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c2wbqelme8vy1"]
+
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_0t7ph"]
+[ext_resource type="Texture2D" uid="uid://dquer6m8lapux" path="res://assets/ram.png" id="1_bfuag"]
+
+[resource]
+script = ExtResource("1_0t7ph")
+item_name = "Ram Stick"
+icon = ExtResource("1_bfuag")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

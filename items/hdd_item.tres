@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://bepkdyf7dn1y0"]
+
+[ext_resource type="Texture2D" uid="uid://c1ja7ug8bkxne" path="res://assets/hdd.png" id="1_8xwf0"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_r24a6"]
+
+[resource]
+script = ExtResource("1_r24a6")
+item_name = "Hard Disk Drive"
+icon = ExtResource("1_8xwf0")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

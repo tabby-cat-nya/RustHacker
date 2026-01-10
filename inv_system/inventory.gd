@@ -1,0 +1,22 @@
+extends PanelContainer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	if Input.get_current_cursor_shape() == CURSOR_FORBIDDEN:
+		DisplayServer.cursor_set_shape(DisplayServer.CURSOR_ARROW)
+
+var data_bk
+func _notification(what: int) -> void:
+	if what == Node.NOTIFICATION_DRAG_BEGIN:
+		data_bk = get_viewport().gui_get_drag_data()
+	if what == Node.NOTIFICATION_DRAG_END:
+		if not is_drag_successful():
+			if data_bk:
+				data_bk.icon.show()
+				data_bk = null

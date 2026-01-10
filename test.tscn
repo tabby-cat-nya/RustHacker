@@ -1,0 +1,259 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsfal3m4siap2"]
+
+[ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="1_6uqi0"]
+[ext_resource type="Script" uid="uid://cpd04flfh5nlc" path="res://inv_system/item_slot.gd" id="1_8uh7m"]
+[ext_resource type="Texture2D" uid="uid://b7jp850fqpa0j" path="res://icon.svg" id="1_37kl0"]
+[ext_resource type="Resource" uid="uid://bepkdyf7dn1y0" path="res://items/hdd_item.tres" id="3_ykrsh"]
+[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_g14j6"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 67.0
+offset_right = 403.0
+offset_bottom = 549.0
+script = ExtResource("1_6uqi0")
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InventoryPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inventory 1"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="InventoryPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="ItemSlot" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+item = ExtResource("3_ykrsh")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_37kl0")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot11" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+item = ExtResource("5_g14j6")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot11"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_37kl0")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot2" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot3" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot4" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot5" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot6" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot6"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot7" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot7"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot8" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot9" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot9"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ItemSlot10" type="Panel" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_8uh7m")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="InventoryPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/ItemSlot10"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 3
+stretch_mode = 4
