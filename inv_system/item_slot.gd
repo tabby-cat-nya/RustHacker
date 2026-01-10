@@ -1,4 +1,5 @@
 extends Panel
+class_name ItemSlot
 
 @export var icon : TextureRect
 @export var item: ItemData

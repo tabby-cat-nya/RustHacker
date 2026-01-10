@@ -1,8 +1,16 @@
 extends PanelContainer
+class_name Inventory
 
+@export var inventory_name : String = "Inventory"
+@export var slots : Array[ItemSlot]
+@export_group("Node References")
+@export var grid : GridContainer
+@export var inv_label : Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	slots.assign(grid.get_children())
+	inv_label.text = inventory_name
 	pass # Replace with function body.
 
 
@@ -20,3 +28,15 @@ func _notification(what: int) -> void:
 			if data_bk:
 				data_bk.icon.show()
 				data_bk = null
+
+#attempts to add the provided item to the inventory, returns true on success
+func add_item(item : ItemData) -> bool:
+	for slot in slots:
+		if slot.item == null:
+			slot.item = item
+			slot.update_ui()
+			return true # item placed successfully
+	return false # theres no space to add the item
+	
+	
+	

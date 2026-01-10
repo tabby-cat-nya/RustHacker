@@ -11,3 +11,8 @@
 - [ ] selling things 
 
 Submission day: Jan 19th 8AM
+
+# Maintain motivation by setting milestones and showing progress when you reach them!
+1. [ ] Gettign a random assortment of loot from the ewaste bin
+2. [ ] Crafting with that stuff
+3. [ ] Selling the stuff

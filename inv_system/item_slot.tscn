@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgqs20xf7l8c"]
+
+[ext_resource type="Script" uid="uid://cpd04flfh5nlc" path="res://inv_system/item_slot.gd" id="1_m11ft"]
+[ext_resource type="Texture2D" uid="uid://b7jp850fqpa0j" path="res://icon.svg" id="3_0tnt0"]
+
+[node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon")]
+custom_minimum_size = Vector2(64, 64)
+script = ExtResource("1_m11ft")
+icon = NodePath("Icon")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 6.4000015
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0tnt0")
+expand_mode = 3
+stretch_mode = 4
