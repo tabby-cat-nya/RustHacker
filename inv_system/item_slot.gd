@@ -13,8 +13,13 @@ func update_ui():
 	if not item:
 		icon.texture = null
 		label.text = ""
+		remove_theme_stylebox_override("panel")
 		return
 		
+	if item.custom_panel_style:
+		add_theme_stylebox_override("panel",item.custom_panel_style)
+	else:
+		remove_theme_stylebox_override("panel")
 	icon.texture = item.icon
 	#tooltip_text = item.item_name
 	label.text = item.value
