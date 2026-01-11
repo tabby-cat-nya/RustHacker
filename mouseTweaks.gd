@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("quick_move") and hovered_slot:
+	if Input.is_action_pressed("quick_move") and hovered_slot:
 		# figure out what the "other" inventory is and move it
 		var current_inv : String = hovered_slot.type
 		var target_inv : Inventory
@@ -27,5 +27,7 @@ func _process(delta: float) -> void:
 			# only runs if it was able to put the item in the target inv
 			hovered_slot.item = null
 			hovered_slot.update_ui()
+			player_inventory.notification(NOTIFICATION_DRAG_END)
+			other_inventory.notification(NOTIFICATION_DRAG_END)
 		
 		pass

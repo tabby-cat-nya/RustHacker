@@ -1,5 +1,8 @@
 extends Control
 
+@export var ewaste_button : Button
+@export var computer_button : Button
+@export var crafting_inv : Inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,7 +11,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if crafting_inv.filled_slots() > 0:
+		ewaste_button.disabled = true
+		computer_button.disabled = true
+	else:
+		ewaste_button.disabled = false
+		computer_button.disabled = false
 
 
 func _on_goto_ewaste_pressed() -> void:

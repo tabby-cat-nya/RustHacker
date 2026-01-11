@@ -16,8 +16,9 @@ func _process(delta: float) -> void:
 
 func _on_loot_button_pressed() -> void:
 	if Clock.has_time(10):
-		Clock.use_time(10)
-		bin_inventory.add_item(pick_random_item())
+		if bin_inventory.add_item(pick_random_item()):
+			Clock.use_time(10)
+			#bin_inventory.add_item(pick_random_item())
 	
 	#loot_button.hide()
 	#bin_inventory.show()

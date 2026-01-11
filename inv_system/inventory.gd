@@ -46,3 +46,9 @@ func add_item(item : ItemData) -> bool:
 			return true # item placed successfully
 	return false # theres no space to add the item
 	
+func filled_slots() -> int:
+	var count : int = 0
+	for slot in slots:
+		if slot.item:
+			count += 1
+	return count

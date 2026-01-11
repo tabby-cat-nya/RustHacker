@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bla0gy2tlqwe1" path="res://scenes/workshop.gd" id="1_g1tdj"]
 [ext_resource type="PackedScene" uid="uid://f06ym5ujhdsc" path="res://inv_system/crafting_panel.tscn" id="2_wwo6w"]
 
-[node name="Workshop" type="Control"]
+[node name="Workshop" type="Control" node_paths=PackedStringArray("ewaste_button", "computer_button", "crafting_inv")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,6 +13,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_g1tdj")
+ewaste_button = NodePath("GotoEwaste")
+computer_button = NodePath("GotoComputer")
+crafting_inv = NodePath("CraftingPanel")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
