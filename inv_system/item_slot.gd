@@ -4,6 +4,7 @@ class_name ItemSlot
 @export var icon : TextureRect
 @export var item: ItemData
 @export var label : Label
+var type : String
 
 func _ready() -> void:
 	update_ui()
@@ -18,6 +19,7 @@ func update_ui():
 	#tooltip_text = item.item_name
 	label.text = item.value
 		
+
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if not item:
@@ -51,9 +53,11 @@ func _on_mouse_entered() -> void:
 	#print("im real?")
 	if item:
 		Tooltip.show_tip(item.item_name)
+		MouseTweaks.hovered_slot = self
 	pass # Replace with function body.
 
 
 func _on_mouse_exited() -> void:
 	Tooltip.hide_tip()
+	MouseTweaks.hovered_slot = null
 	pass # Replace with function body.

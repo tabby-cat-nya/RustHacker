@@ -3,14 +3,22 @@ class_name Inventory
 
 @export var inventory_name : String = "Inventory"
 @export var slots : Array[ItemSlot]
+@export var type: String
 @export_group("Node References")
 @export var grid : GridContainer
 @export var inv_label : Label
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	slots.assign(grid.get_children())
 	inv_label.text = inventory_name
+	for slot in slots:
+		slot.type = type
+	if type == "Inventory":
+		MouseTweaks.player_inventory = self
+	else:
+		MouseTweaks.other_inventory = self
 	pass # Replace with function body.
 
 
@@ -37,6 +45,4 @@ func add_item(item : ItemData) -> bool:
 			slot.update_ui()
 			return true # item placed successfully
 	return false # theres no space to add the item
-	
-	
 	

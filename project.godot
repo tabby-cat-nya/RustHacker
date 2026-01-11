@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Tooltip="*res://tooltip.tscn"
 PlayerInventory="*res://inv_system/player_inventory.tscn"
 Clock="*res://time_system/clock.tscn"
+MouseTweaks="*res://mouseTweaks.gd"
 
 [display]
 
@@ -32,6 +33,14 @@ movie_writer/ogv/encoding_speed=1
 movie_writer/ogv/keyframe_interval=128
 movie_writer/movie_file="C:/Users/tabby/Documents/Godot/Projects/RepurposedJam/video.avi"
 movie_writer/fps=30
+
+[input]
+
+quick_move={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":true,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(218, 14),"global_position":Vector2(226, 57),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

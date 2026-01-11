@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://f06ym5ujhdsc"]
+[gd_scene load_steps=9 format=3 uid="uid://f06ym5ujhdsc"]
 
 [ext_resource type="Script" uid="uid://br4fgimf7nygr" path="res://inv_system/crafting_panel.gd" id="1_441s3"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="2_h0v0h"]
+[ext_resource type="Script" uid="uid://b4iu5xrdf0evs" path="res://crafting/craft_recipe.gd" id="2_ytbts"]
+[ext_resource type="Resource" uid="uid://dp4hnei3ur6oe" path="res://crafting/crafts/computer_craft.tres" id="3_4h4i0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0v0h"]
 content_margin_left = 0.0
@@ -82,6 +84,7 @@ offset_right = 962.0
 offset_bottom = 382.0
 script = ExtResource("1_441s3")
 action_button = NodePath("MarginContainer/VBoxContainer/ActionButton")
+craft_recipes = Array[ExtResource("2_ytbts")]([ExtResource("3_4h4i0")])
 assemble_style = SubResource("StyleBoxFlat_h0v0h")
 assemble_style_hover = SubResource("StyleBoxFlat_441s3")
 assemble_style_pressed = SubResource("StyleBoxFlat_h0v0h")
@@ -89,6 +92,7 @@ scavenge_style = SubResource("StyleBoxFlat_ytbts")
 scavenge_style_hover = SubResource("StyleBoxFlat_4h4i0")
 scavenge_style_pressed = SubResource("StyleBoxFlat_ytbts")
 inventory_name = "Workbench"
+type = "Crafting"
 grid = NodePath("MarginContainer/VBoxContainer/ScrollContainer/GridContainer")
 inv_label = NodePath("MarginContainer/VBoxContainer/Label")
 

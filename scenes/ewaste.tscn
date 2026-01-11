@@ -14,7 +14,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_00tp4"]
 font_color = Color(1, 0, 0, 0.5764706)
 
-[node name="Control" type="Control" node_paths=PackedStringArray("bin_inventory", "loot_button")]
+[node name="ewaste" type="Control" node_paths=PackedStringArray("bin_inventory", "loot_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -48,6 +48,7 @@ offset_right = 1066.0
 offset_bottom = 587.0
 script = ExtResource("1_6uqi0")
 inventory_name = "E-waste Recycling Bin"
+type = "Loot"
 grid = NodePath("MarginContainer/VBoxContainer/ScrollContainer/GridContainer")
 inv_label = NodePath("MarginContainer/VBoxContainer/Label")
 

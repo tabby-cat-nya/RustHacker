@@ -35,6 +35,7 @@ offset_right = 419.0
 offset_bottom = 561.0
 script = ExtResource("2_hk4hx")
 inventory_name = "Your Inventory"
+type = "Inventory"
 grid = NodePath("MarginContainer/VBoxContainer/ScrollContainer/GridContainer")
 inv_label = NodePath("MarginContainer/VBoxContainer/Label")
 

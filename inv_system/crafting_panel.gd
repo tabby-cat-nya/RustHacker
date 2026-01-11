@@ -1,6 +1,7 @@
 extends Inventory
 
 @export var action_button : Button
+@export var craft_recipes : Array[CraftRecipe]
 #@export var no_style : StyleBox
 @export var assemble_style : StyleBox
 @export var assemble_style_hover : StyleBox
@@ -26,8 +27,13 @@ func _process(delta: float) -> void:
 func _notification(what: int) -> void:
 	super(what)
 	if what == Node.NOTIFICATION_DRAG_END:
-		# check against recipies!
+		check_recipes()
 		pass
+
+func check_recipes():
+	print("checking now")
+	# write checking logic
+	pass
 
 func style_assemble():
 	action_button.add_theme_stylebox_override("normal",assemble_style)
