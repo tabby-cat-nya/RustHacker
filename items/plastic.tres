@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cnr1k8seffsxb"]
+
+[ext_resource type="Texture2D" uid="uid://b7tii4smwcurc" path="res://assets/item images/plastic.png" id="1_2haha"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_31pxd"]
+
+[resource]
+script = ExtResource("2_31pxd")
+item_name = "Plastic Scrap"
+icon = ExtResource("1_2haha")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

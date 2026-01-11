@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://8vw85c1qrypm"]
+
+[ext_resource type="Texture2D" uid="uid://b2vn26davyrou" path="res://assets/item images/computer.png" id="1_e0dbh"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_x7wm3"]
+
+[resource]
+script = ExtResource("2_x7wm3")
+item_name = "Computer"
+icon = ExtResource("1_e0dbh")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

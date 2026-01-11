@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ScavengeRecipe" load_steps=6 format=3 uid="uid://dpnp3xlwhla4h"]
+
+[ext_resource type="Script" uid="uid://oa5rlx6ttwuj" path="res://crafting/rollableLoot.gd" id="2_r41g5"]
+[ext_resource type="Resource" uid="uid://swd1m0hvep4c" path="res://items/small_psu_item.tres" id="3_klubo"]
+[ext_resource type="Resource" uid="uid://cnr1k8seffsxb" path="res://items/plastic.tres" id="4_vxo6p"]
+[ext_resource type="Script" uid="uid://boqr1fowaqmt0" path="res://crafting/scavenge_recipe.gd" id="5_ewtie"]
+
+[sub_resource type="Resource" id="Resource_wkxe4"]
+script = ExtResource("2_r41g5")
+item = ExtResource("4_vxo6p")
+chance = 3
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[resource]
+script = ExtResource("5_ewtie")
+input = ExtResource("3_klubo")
+rolls = 1
+loot_pool = Array[ExtResource("2_r41g5")]([SubResource("Resource_wkxe4")])
+metadata/_custom_type_script = "uid://boqr1fowaqmt0"
