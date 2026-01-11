@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbxymsdyvbe2p"]
+
+[ext_resource type="Texture2D" uid="uid://dhyryjblax7sj" path="res://assets/workshop.png" id="1_d7fqo"]
+[ext_resource type="Script" uid="uid://bla0gy2tlqwe1" path="res://scenes/workshop.gd" id="1_g1tdj"]
+[ext_resource type="PackedScene" uid="uid://f06ym5ujhdsc" path="res://inv_system/crafting_panel.tscn" id="2_wwo6w"]
+
+[node name="Workshop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_g1tdj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_d7fqo")
+expand_mode = 3
+
+[node name="GotoEwaste" type="Button" parent="."]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 469.0
+offset_right = 757.0
+offset_bottom = 500.0
+text = "Go to ewaste bins"
+
+[node name="GotoComputer" type="Button" parent="."]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 522.0
+offset_right = 760.0
+offset_bottom = 553.0
+text = "Go to computer"
+
+[node name="CraftingPanel" parent="." instance=ExtResource("2_wwo6w")]
+layout_mode = 0
+offset_left = 874.0
+offset_top = 149.0
+offset_right = 1087.0
+offset_bottom = 442.0
+
+[connection signal="pressed" from="GotoEwaste" to="." method="_on_goto_ewaste_pressed"]
+[connection signal="pressed" from="GotoComputer" to="." method="_on_goto_computer_pressed"]

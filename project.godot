@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Repurposed Jam"
-run/main_scene="uid://dsfal3m4siap2"
+run/main_scene="uid://dbxymsdyvbe2p"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Tooltip="*res://tooltip.tscn"
 PlayerInventory="*res://inv_system/player_inventory.tscn"
 Clock="*res://time_system/clock.tscn"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [editor]
 

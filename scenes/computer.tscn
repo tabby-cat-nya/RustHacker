@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu2yyw3f2avub"]
+
+[ext_resource type="Script" uid="uid://cq6xhdlib6c50" path="res://scenes/computer.gd" id="1_8pqrt"]
+[ext_resource type="Texture2D" uid="uid://crdbk8wkw63k0" path="res://assets/computer.png" id="1_om4aa"]
+
+[node name="Computer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_8pqrt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_om4aa")
+expand_mode = 3
+
+[node name="GotoWorkshop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 591.0
+offset_right = 635.0
+offset_bottom = 622.0
+text = "Goto workshop"
+
+[connection signal="pressed" from="GotoWorkshop" to="." method="_on_goto_workshop_pressed"]

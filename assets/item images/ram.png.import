@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmstxerbgdq61"
-path="res://.godot/imported/small psu.png-8910d553249f30fc51a0f97c315ad4aa.ctex"
+uid="uid://dquer6m8lapux"
+path="res://.godot/imported/ram.png-40ed34ea691b6c1c52eebfbad1434427.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/small psu.png"
-dest_files=["res://.godot/imported/small psu.png-8910d553249f30fc51a0f97c315ad4aa.ctex"]
+source_file="res://assets/item images/ram.png"
+dest_files=["res://.godot/imported/ram.png-40ed34ea691b6c1c52eebfbad1434427.ctex"]
 
 [params]
 

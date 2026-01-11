@@ -33,3 +33,7 @@ func _on_loot_button_pressed() -> void:
 func pick_random_item() -> ItemData:
 	var icount = loot_pool.size()
 	return loot_pool[randi() % icount]
+
+
+func _on_return_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/workshop.tscn")

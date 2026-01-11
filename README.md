@@ -18,3 +18,21 @@ Submission day: Jan 19th 8AM
 3. [ ] Selling the stuff
 
 - [ ] send prototype to maxie~
+
+## Item Ideas
+- [ ] metal/plastic scrap
+- [ ] disk drive
+- [ ] projector
+	- [ ] lens
+- [ ] docking station
+	- [ ] IO Ports
+- [ ] centrifuge
+	- [ ] motor
+- [ ] 3d printer
+	- [ ]  heating element
+- [ ] mouse
+- [ ] cables
+- [ ] printer
+- [ ] cpu, gpu
+- [ ] pc / laptop
+- [ ] 

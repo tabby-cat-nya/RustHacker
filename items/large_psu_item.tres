@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://88v5bcyrgpob"]
 
-[ext_resource type="Texture2D" uid="uid://dd5u5obr0c61q" path="res://assets/big psu.png" id="1_rjw1c"]
+[ext_resource type="Texture2D" uid="uid://dd5u5obr0c61q" path="res://assets/item images/big psu.png" id="1_rjw1c"]
 [ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_i66kx"]
 
 [resource]

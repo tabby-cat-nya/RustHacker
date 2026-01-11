@@ -140,3 +140,4 @@ grow_vertical = 0
 text = "Return to workshop"
 
 [connection signal="pressed" from="LootButton" to="." method="_on_loot_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]

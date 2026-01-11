@@ -9,6 +9,7 @@
 font_size = 32
 
 [node name="Clock" type="Control" node_paths=PackedStringArray("bar", "timer_text")]
+z_index = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
