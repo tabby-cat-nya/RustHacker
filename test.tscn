@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsfal3m4siap2"]
+[gd_scene load_steps=12 format=3 uid="uid://dsfal3m4siap2"]
 
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="1_6uqi0"]
 [ext_resource type="Texture2D" uid="uid://dj487wauiay6i" path="res://assets/ewase bins.png" id="1_g14j6"]
@@ -10,6 +10,9 @@
 [ext_resource type="Resource" uid="uid://88v5bcyrgpob" path="res://items/large_psu_item.tres" id="6_77dp3"]
 [ext_resource type="Resource" uid="uid://swd1m0hvep4c" path="res://items/small_psu_item.tres" id="7_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="7_xersf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_00tp4"]
+font_color = Color(1, 0, 0, 0.5764706)
 
 [node name="Control" type="Control" node_paths=PackedStringArray("bin_inventory", "loot_button")]
 layout_mode = 3
@@ -37,13 +40,12 @@ texture = ExtResource("1_g14j6")
 expand_mode = 3
 
 [node name="BinPanel" type="PanelContainer" parent="." node_paths=PackedStringArray("grid", "inv_label")]
-visible = false
 z_index = 2
 layout_mode = 0
 offset_left = 714.0
 offset_top = 386.0
 offset_right = 1066.0
-offset_bottom = 563.0
+offset_bottom = 587.0
 script = ExtResource("1_6uqi0")
 inventory_name = "E-waste Recycling Bin"
 grid = NodePath("MarginContainer/VBoxContainer/ScrollContainer/GridContainer")
@@ -101,6 +103,12 @@ layout_mode = 2
 
 [node name="ItemSlot21" parent="BinPanel/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("7_xersf")]
 layout_mode = 2
+
+[node name="Label2" type="Label" parent="BinPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "(Items left here will be destroyed)"
+label_settings = SubResource("LabelSettings_00tp4")
+horizontal_alignment = 1
 
 [node name="LootButton" type="Button" parent="."]
 layout_mode = 1
