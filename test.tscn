@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsfal3m4siap2"]
+[gd_scene load_steps=11 format=3 uid="uid://dsfal3m4siap2"]
 
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="1_6uqi0"]
 [ext_resource type="Texture2D" uid="uid://dj487wauiay6i" path="res://assets/ewase bins.png" id="1_g14j6"]
@@ -10,9 +10,9 @@
 [ext_resource type="Resource" uid="uid://88v5bcyrgpob" path="res://items/large_psu_item.tres" id="6_77dp3"]
 [ext_resource type="Resource" uid="uid://swd1m0hvep4c" path="res://items/small_psu_item.tres" id="7_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="7_xersf"]
-[ext_resource type="Script" uid="uid://cbta38dhunndc" path="res://tooltip.gd" id="11_77dp3"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("bin_inventory", "loot_button")]
+z_index = -1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -191,20 +191,5 @@ offset_right = 81.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Return to workshop"
-
-[node name="Tooltip" type="PanelContainer" parent="." node_paths=PackedStringArray("tooltip_label")]
-layout_mode = 1
-offset_right = 161.0
-offset_bottom = 40.0
-mouse_filter = 2
-script = ExtResource("11_77dp3")
-tooltip_label = NodePath("VBoxContainer/Label")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Tooltip/VBoxContainer"]
-layout_mode = 2
-text = "Item Name"
 
 [connection signal="pressed" from="LootButton" to="." method="_on_loot_button_pressed"]

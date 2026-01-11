@@ -28,6 +28,7 @@ expand_mode = 3
 stretch_mode = 4
 
 [node name="Label" type="Label" parent="Icon"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -43,3 +44,6 @@ grow_vertical = 0
 text = "120 GB"
 label_settings = SubResource("LabelSettings_ab1u2")
 horizontal_alignment = 2
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

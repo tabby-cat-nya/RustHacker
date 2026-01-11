@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://sb2wq874p37j"]
+
+[ext_resource type="Script" uid="uid://cbta38dhunndc" path="res://tooltip.gd" id="1_gwequ"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwequ"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0.8784314)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxk8h"]
+
+[node name="Tooltip" type="PanelContainer" node_paths=PackedStringArray("tooltip_label")]
+offset_right = 95.0
+offset_bottom = 31.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwequ")
+script = ExtResource("1_gwequ")
+tooltip_label = NodePath("VBoxContainer/Label")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Item Name"
+label_settings = SubResource("LabelSettings_oxk8h")

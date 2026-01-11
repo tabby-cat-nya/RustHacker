@@ -44,3 +44,15 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	data.icon.show()
 	update_ui()
 	data.update_ui()
+
+
+func _on_mouse_entered() -> void:
+	print("im real?")
+	if item:
+		Tooltip.show_tip(item.item_name)
+	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	Tooltip.hide_tip()
+	pass # Replace with function body.

@@ -9,4 +9,12 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	global_position = get_global_mouse_position() + Vector2(1,1)
+	global_position = get_global_mouse_position() + Vector2(12,-6)
+
+func show_tip(text : String):
+	tooltip_label.text = text
+	show()
+
+func hide_tip():
+	hide()
+	pass
