@@ -94,10 +94,16 @@ func style_none():
 func _on_action_button_pressed() -> void:
 	if not matched_recipe:
 		return
-	if matched_recipe is CraftRecipe:
+	elif matched_recipe is CraftRecipe:
 		var crafting : CraftRecipe = matched_recipe
 		empty_grid()
 		add_item(crafting.output)
+		check_recipes()
+	elif matched_recipe is ScavengeRecipe:
+		empty_grid()
+		for x in range(matched_recipe.rolls):
+			add_item(matched_recipe.roll())
+		check_recipes()
 	pass # Replace with function body.
 
 func empty_grid():
