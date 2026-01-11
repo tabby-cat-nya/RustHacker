@@ -4,6 +4,7 @@ extends PanelContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hide()
 	pass # Replace with function body.
 
 
@@ -13,6 +14,7 @@ func _process(delta: float) -> void:
 
 func show_tip(text : String):
 	tooltip_label.text = text
+	reset_size()
 	show()
 
 func hide_tip():

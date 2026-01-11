@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkhg56q71vsjv"]
+
+[ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
+[ext_resource type="PackedScene" uid="uid://bar46c75dbi2t" path="res://inv_system/inventory_panel.tscn" id="2_hk4hx"]
+
+[node name="PlayerInventory" type="Control" node_paths=PackedStringArray("inventory_panel", "button")]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_vk2kx")
+inventory_panel = NodePath("InventoryPanel")
+button = NodePath("Button")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 129.0
+grow_vertical = 0
+text = "Show Inventory"
+
+[node name="InventoryPanel" parent="." instance=ExtResource("2_hk4hx")]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 79.0
+offset_right = 419.0
+offset_bottom = 561.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

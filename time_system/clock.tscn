@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpa3yvdrddtsh"]
+
+[ext_resource type="Texture2D" uid="uid://cvsibrbtuqfww" path="res://assets/ready_time.png" id="1_chnjs"]
+[ext_resource type="Texture2D" uid="uid://bemb2moou1hkj" path="res://assets/timer_over.png" id="2_m6rn1"]
+[ext_resource type="Texture2D" uid="uid://dvxtm2ahjd55h" path="res://assets/used_time.png" id="3_uyb5s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r3ygl"]
+font_size = 32
+
+[node name="Clock" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "7"
+label_settings = SubResource("LabelSettings_r3ygl")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Days Left"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 73)
+layout_mode = 2
+fill_mode = 4
+radial_initial_angle = 270.0
+radial_fill_degrees = 180.0
+radial_center_offset = Vector2(0, 41.055)
+nine_patch_stretch = true
+texture_under = ExtResource("1_chnjs")
+texture_over = ExtResource("2_m6rn1")
+texture_progress = ExtResource("3_uyb5s")

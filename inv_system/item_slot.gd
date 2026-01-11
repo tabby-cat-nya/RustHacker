@@ -15,7 +15,7 @@ func update_ui():
 		return
 		
 	icon.texture = item.icon
-	tooltip_text = item.item_name
+	#tooltip_text = item.item_name
 	label.text = item.value
 		
 
@@ -28,7 +28,8 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	c.add_child(preview)
 	preview.position -= Vector2(32,32)
 	preview.self_modulate = Color.TRANSPARENT
-	c.modulate = Color(c.modulate,0.5)
+	c.z_index = 3
+	c.modulate = Color(c.modulate,0.6)
 	set_drag_preview(c)
 	icon.hide()
 	return self
@@ -47,7 +48,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 
 
 func _on_mouse_entered() -> void:
-	print("im real?")
+	#print("im real?")
 	if item:
 		Tooltip.show_tip(item.item_name)
 	pass # Replace with function body.
