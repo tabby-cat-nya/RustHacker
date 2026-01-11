@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ScavengeRecipe" load_steps=4 format=3 uid="uid://deohei5avmspt"]
+
+[ext_resource type="Resource" uid="uid://88v5bcyrgpob" path="res://items/large_psu_item.tres" id="1_20hhf"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_o2l1m"]
+[ext_resource type="Script" uid="uid://boqr1fowaqmt0" path="res://crafting/scavenge_recipe.gd" id="2_20hhf"]
+
+[resource]
+script = ExtResource("2_20hhf")
+input = ExtResource("1_20hhf")
+metadata/_custom_type_script = "uid://boqr1fowaqmt0"

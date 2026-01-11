@@ -1,4 +1,4 @@
-extends Resource
+extends Recipe
 class_name ScavengeRecipe
 
 @export var input : ItemData
