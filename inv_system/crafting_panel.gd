@@ -92,4 +92,15 @@ func style_none():
 
 
 func _on_action_button_pressed() -> void:
+	if not matched_recipe:
+		return
+	if matched_recipe is CraftRecipe:
+		var crafting : CraftRecipe = matched_recipe
+		empty_grid()
+		add_item(crafting.output)
 	pass # Replace with function body.
+
+func empty_grid():
+	for slot in slots:
+		slot.item = null
+		slot.update_ui()
