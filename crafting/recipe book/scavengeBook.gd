@@ -15,4 +15,8 @@ func scavs_ready():
 	for scav in RecipeManager.scavenge_recipes:
 		# TODO: create an item slot with the scav recipie icon, bock dragging
 		# show details about scavenge results in tooltip?
+		var new_slot = load("res://inv_system/item_slot.tscn").instantiate() as ItemSlot
+		new_slot.item = scav.input
+		new_slot.block_taking = true
+		grid.add_child(new_slot)
 		pass

@@ -12,6 +12,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("quick_move") and hovered_slot:
+		if hovered_slot.block_taking:
+			return
 		# figure out what the "other" inventory is and move it
 		var current_inv : String = hovered_slot.type
 		var target_inv : Inventory
