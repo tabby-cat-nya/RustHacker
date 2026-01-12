@@ -43,7 +43,7 @@ func load_recipes():
 			if (file_name.get_extension() == "remap"):
 				file_name = file_name.replace('.remap', '')
 			print(crafts_dir + file_name)
-			craft_recipes.append(load(scavenges_dir + file_name) as ScavengeRecipe)
+			scavenge_recipes.append(load(scavenges_dir + file_name) as ScavengeRecipe)
 			file_name = dir.get_next()
 			
 	recipes_loaded.emit()

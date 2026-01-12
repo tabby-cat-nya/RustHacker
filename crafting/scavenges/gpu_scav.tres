@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ScavengeRecipe" load_steps=10 format=3 uid="uid://b75dli4mcy0ua"]
+
+[ext_resource type="Resource" uid="uid://oc57emfpcnm0" path="res://items/gpu.tres" id="1_t0fjb"]
+[ext_resource type="Script" uid="uid://oa5rlx6ttwuj" path="res://crafting/rollableLoot.gd" id="2_n1ajs"]
+[ext_resource type="Resource" uid="uid://cnr1k8seffsxb" path="res://items/plastic.tres" id="3_t0fjb"]
+[ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="4_3aoas"]
+[ext_resource type="Script" uid="uid://boqr1fowaqmt0" path="res://crafting/scavenge_recipe.gd" id="4_bmsvv"]
+[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_fut73"]
+
+[sub_resource type="Resource" id="Resource_wkxe4"]
+script = ExtResource("2_n1ajs")
+item = ExtResource("3_t0fjb")
+chance = 4
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_aq2uy"]
+script = ExtResource("2_n1ajs")
+item = ExtResource("4_3aoas")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_7lonm"]
+script = ExtResource("2_n1ajs")
+item = ExtResource("5_fut73")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[resource]
+script = ExtResource("4_bmsvv")
+input = ExtResource("1_t0fjb")
+loot_pool = Array[ExtResource("2_n1ajs")]([SubResource("Resource_wkxe4"), SubResource("Resource_aq2uy"), SubResource("Resource_7lonm")])
+metadata/_custom_type_script = "uid://boqr1fowaqmt0"
