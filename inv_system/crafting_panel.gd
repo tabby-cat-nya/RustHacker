@@ -1,8 +1,8 @@
 extends Inventory
 
 @export var action_button : Button
-@export var craft_recipes : Array[CraftRecipe]
-@export var scavenge_recipes : Array[ScavengeRecipe]
+#@export var craft_recipes : Array[CraftRecipe]
+#@export var scavenge_recipes : Array[ScavengeRecipe]
 var matched_recipe : Recipe
 #@export var no_style : StyleBox
 @export var assemble_style : StyleBox
@@ -46,7 +46,7 @@ func check_recipes():
 				item_to_scavenge = slot.item
 				break
 		
-		for recipe in scavenge_recipes:
+		for recipe in RecipeManager.scavenge_recipes:
 			if recipe.input.item_name == item_to_scavenge.item_name:
 				matched_recipe = recipe
 				style_scavenge()
@@ -54,7 +54,7 @@ func check_recipes():
 		
 	elif filled_slots() > 1:
 		# check crafting recipes
-		var possible_recipes : Array[CraftRecipe] = craft_recipes.duplicate()
+		var possible_recipes : Array[CraftRecipe] = RecipeManager.craft_recipes.duplicate()
 		for x in range(9):
 			for recipe in possible_recipes:
 				if recipe.ingredients[x] and slots[x].item:

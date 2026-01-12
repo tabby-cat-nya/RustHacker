@@ -4,6 +4,7 @@ class_name RecipeCard
 @export var grid_container : GridContainer
 var ingredient_slots : Array[ItemSlot]
 @export var output_slot : ItemSlot
+@export var output_label : Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,3 +27,4 @@ func show_recipe(recipe : CraftRecipe):
 	output_slot.item = recipe.output
 	output_slot.update_ui()
 	output_slot.block_taking = true
+	output_label.text = recipe.output.item_name

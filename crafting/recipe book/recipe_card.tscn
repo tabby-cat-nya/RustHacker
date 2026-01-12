@@ -6,10 +6,11 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8t2l7"]
 size = Vector2(32, 32)
 
-[node name="Recipe Card" type="PanelContainer" node_paths=PackedStringArray("grid_container", "output_slot")]
+[node name="Recipe Card" type="PanelContainer" node_paths=PackedStringArray("grid_container", "output_slot", "output_label")]
 script = ExtResource("1_8t2l7")
 grid_container = NodePath("HBoxContainer/GridContainer")
 output_slot = NodePath("HBoxContainer/VBoxContainer/ItemSlot10")
+output_label = NodePath("HBoxContainer/VBoxContainer/Label")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
