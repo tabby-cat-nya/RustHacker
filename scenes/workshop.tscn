@@ -42,7 +42,7 @@ offset_left = 614.0
 offset_top = 522.0
 offset_right = 760.0
 offset_bottom = 553.0
-text = "Go to computer"
+text = "Go to room"
 
 [node name="CraftingPanel" parent="." instance=ExtResource("2_wwo6w")]
 layout_mode = 0

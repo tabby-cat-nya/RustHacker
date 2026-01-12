@@ -5,6 +5,7 @@ class_name ItemSlot
 @export var item: ItemData
 @export var label : Label
 var type : String
+var block_taking : bool = false
 
 func _ready() -> void:
 	update_ui()
@@ -27,7 +28,7 @@ func update_ui():
 
 
 func _get_drag_data(at_position: Vector2) -> Variant:
-	if not item:
+	if not item or block_taking:
 		return
 	
 	var preview = duplicate()
@@ -42,7 +43,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	return self
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
-	return true
+	return !block_taking
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var temp = item

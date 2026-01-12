@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://btenxre8yvynx"]
+
+[ext_resource type="Script" uid="uid://mvqohkfd6whc" path="res://crafting/recipe book/recipe_card.gd" id="1_8t2l7"]
+[ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="1_ebtwo"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8t2l7"]
+size = Vector2(32, 32)
+
+[node name="Recipe Card" type="PanelContainer" node_paths=PackedStringArray("grid_container", "output_slot")]
+script = ExtResource("1_8t2l7")
+grid_container = NodePath("HBoxContainer/GridContainer")
+output_slot = NodePath("HBoxContainer/VBoxContainer/ItemSlot10")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="HBoxContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="ItemSlot" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot2" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot3" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot4" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot5" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot6" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot7" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot8" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="ItemSlot9" parent="HBoxContainer/GridContainer" instance=ExtResource("1_ebtwo")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_8t2l7")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="ItemSlot10" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_ebtwo")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Computer"
+horizontal_alignment = 1

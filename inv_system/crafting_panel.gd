@@ -34,7 +34,7 @@ func _notification(what: int) -> void:
 		pass
 
 func check_recipes():
-	print("checking now")
+	#print("checking now")
 	style_none()
 	# write checking logic
 	
@@ -62,9 +62,9 @@ func check_recipes():
 						possible_recipes.erase(recipe)
 				elif recipe.ingredients[x] or slots[x].item:
 					possible_recipes.erase(recipe)
-		print("Possible recipes: " + str(possible_recipes.size()))
+		#print("Possible recipes: " + str(possible_recipes.size()))
 		if possible_recipes.size() == 1:
-			print("found our recipe!")
+			#print("found our recipe!")
 			matched_recipe = possible_recipes[0]
 			style_assemble()
 			return

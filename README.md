@@ -9,7 +9,9 @@
 - [ ] crafting system (3x3 inventory with shaped recipies)
 - [x] loot system (provides random assortment of items from the ewaste bin)
 - [ ] selling things 
-- [ ] shift click items to move to other inventory?
+- [x] shift click items to move to other inventory?
+- [ ] automatically fill recipie book
+- [ ] block taking from recipe book item slots
 
 Submission day: Jan 19th 8AM
 
