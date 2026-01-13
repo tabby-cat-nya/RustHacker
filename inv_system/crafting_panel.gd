@@ -54,20 +54,37 @@ func check_recipes():
 		
 	elif filled_slots() > 1:
 		# check crafting recipes
-		var possible_recipes : Array[CraftRecipe] = RecipeManager.craft_recipes.duplicate()
-		for x in range(9):
-			for recipe in possible_recipes:
+		#var possible_recipes : Array[CraftRecipe] = RecipeManager.craft_recipes.duplicate()
+		#for x in range(9):
+			#for recipe in possible_recipes:
+				#if recipe.ingredients[x] and slots[x].item:
+					#if recipe.ingredients[x].item_name != slots[x].item.item_name:
+						#possible_recipes.erase(recipe)
+				#elif recipe.ingredients[x] or slots[x].item:
+					#possible_recipes.erase(recipe)
+		##print("Possible recipes: " + str(possible_recipes.size()))
+		#if possible_recipes.size() == 1:
+			##print("found our recipe!")
+			#matched_recipe = possible_recipes[0]
+			#style_assemble()
+			#return
+		for recipe in RecipeManager.craft_recipes:
+			var matches : int = 0
+			for x in range(9):
 				if recipe.ingredients[x] and slots[x].item:
 					if recipe.ingredients[x].item_name != slots[x].item.item_name:
-						possible_recipes.erase(recipe)
+						matches = 0
+					else:
+						matches += 1
 				elif recipe.ingredients[x] or slots[x].item:
-					possible_recipes.erase(recipe)
-		#print("Possible recipes: " + str(possible_recipes.size()))
-		if possible_recipes.size() == 1:
-			#print("found our recipe!")
-			matched_recipe = possible_recipes[0]
-			style_assemble()
-			return
+					matches = 0
+				else:
+					matches += 1
+			
+			if matches == 9:
+				matched_recipe = recipe
+				style_assemble()
+				return
 
 func style_assemble():
 	action_button.add_theme_stylebox_override("normal",assemble_style)
