@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://jrm0nf23h0a5"]
+
+[ext_resource type="StyleBox" uid="uid://b66jb7n1t8xeg" path="res://inv_system/item_panels/broken.tres" id="1_8brb6"]
+[ext_resource type="Texture2D" uid="uid://uj12a7mitbeh" path="res://assets/item images/broken-laptop.png" id="1_k071h"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_8brb6"]
+
+[resource]
+script = ExtResource("2_8brb6")
+item_name = "Broken Laptop"
+icon = ExtResource("1_k071h")
+custom_panel_style = ExtResource("1_8brb6")
+bin_chance = 7
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

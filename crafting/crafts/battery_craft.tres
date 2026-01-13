@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=5 format=3 uid="uid://bvndh352x1gph"]
+
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_m5le7"]
+[ext_resource type="Resource" uid="uid://bcteljob51wfj" path="res://items/power_cell.tres" id="2_m5le7"]
+[ext_resource type="Resource" uid="uid://b2tfv3l6feulr" path="res://items/battery.tres" id="3_m5le7"]
+[ext_resource type="Script" uid="uid://b4iu5xrdf0evs" path="res://crafting/craft_recipe.gd" id="4_4c1cj"]
+
+[resource]
+script = ExtResource("4_4c1cj")
+ingredients = Array[ExtResource("1_m5le7")]([ExtResource("2_m5le7"), ExtResource("2_m5le7"), ExtResource("2_m5le7"), null, null, null, null, null, null])
+output = ExtResource("3_m5le7")
+metadata/_custom_type_script = "uid://b4iu5xrdf0evs"

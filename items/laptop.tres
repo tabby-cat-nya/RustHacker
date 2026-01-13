@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bvcquf4e43r6r"]
+
+[ext_resource type="StyleBox" uid="uid://dcnrpkhjhp4tk" path="res://inv_system/item_panels/rare.tres" id="1_xyf87"]
+[ext_resource type="Texture2D" uid="uid://qnhfa84e8h4n" path="res://assets/item images/laptop.png" id="2_xyf87"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="3_c2db4"]
+
+[resource]
+script = ExtResource("3_c2db4")
+item_name = "Laptop"
+icon = ExtResource("2_xyf87")
+custom_panel_style = ExtResource("1_xyf87")
+bin_chance = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

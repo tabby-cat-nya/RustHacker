@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://d14wjbxictxb"]
+
+[ext_resource type="Texture2D" uid="uid://dqbf4cmu0wm77" path="res://assets/item images/dvd drive.png" id="1_kdwp1"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_rrbl5"]
+
+[resource]
+script = ExtResource("2_rrbl5")
+item_name = "Optical Drive"
+icon = ExtResource("1_kdwp1")
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

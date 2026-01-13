@@ -6,6 +6,8 @@ class_name ItemSlot
 @export var label : Label
 var type : String
 var block_taking : bool = false
+const DEFAULT = preload("uid://hgjmkwj0dbqr")
+
 
 func _ready() -> void:
 	update_ui()
@@ -14,13 +16,14 @@ func update_ui():
 	if not item:
 		icon.texture = null
 		label.text = ""
-		remove_theme_stylebox_override("panel")
+		add_theme_stylebox_override("panel",DEFAULT)
 		return
 		
 	if item.custom_panel_style:
 		add_theme_stylebox_override("panel",item.custom_panel_style)
 	else:
-		remove_theme_stylebox_override("panel")
+		#remove_theme_stylebox_override("panel")
+		add_theme_stylebox_override("panel",DEFAULT)
 	icon.texture = item.icon
 	#tooltip_text = item.item_name
 	label.text = item.value

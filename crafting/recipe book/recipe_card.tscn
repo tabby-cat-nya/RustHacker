@@ -74,3 +74,4 @@ size_flags_horizontal = 4
 layout_mode = 2
 text = "Computer"
 horizontal_alignment = 1
+autowrap_mode = 2

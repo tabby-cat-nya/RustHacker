@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://oc57emfpcnm0"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://oc57emfpcnm0"]
 
+[ext_resource type="StyleBox" uid="uid://dcnrpkhjhp4tk" path="res://inv_system/item_panels/rare.tres" id="1_jiyv5"]
 [ext_resource type="Texture2D" uid="uid://8qvirlis0y5t" path="res://assets/item images/gpu.png" id="1_p14l2"]
 [ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_jiyv5"]
 
@@ -7,4 +8,6 @@
 script = ExtResource("2_jiyv5")
 item_name = "GPU"
 icon = ExtResource("1_p14l2")
+custom_panel_style = ExtResource("1_jiyv5")
+bin_chance = 3
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

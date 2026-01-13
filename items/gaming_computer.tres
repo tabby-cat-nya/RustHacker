@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b3uytlkfvj67f"]
+
+[ext_resource type="StyleBox" uid="uid://c563rid4b4fho" path="res://inv_system/item_panels/epic.tres" id="1_j1gmi"]
+[ext_resource type="Texture2D" uid="uid://gwiqoc3dmypk" path="res://assets/item images/gaming_computer.png" id="2_a2am6"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_j1gmi"]
+
+[resource]
+script = ExtResource("2_j1gmi")
+item_name = "Gaming Computer"
+icon = ExtResource("2_a2am6")
+custom_panel_style = ExtResource("1_j1gmi")
+bin_chance = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

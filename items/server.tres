@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://be540abaa08ox"]
+
+[ext_resource type="StyleBox" uid="uid://coy6kyoackibc" path="res://inv_system/item_panels/legendary.tres" id="1_70din"]
+[ext_resource type="Texture2D" uid="uid://c17lm3mjotwb2" path="res://assets/item images/server.png" id="2_5q0ct"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="3_02yvo"]
+
+[resource]
+script = ExtResource("3_02yvo")
+item_name = "Server"
+icon = ExtResource("2_5q0ct")
+custom_panel_style = ExtResource("1_70din")
+bin_chance = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

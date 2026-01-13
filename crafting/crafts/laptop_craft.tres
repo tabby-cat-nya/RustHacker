@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=11 format=3 uid="uid://clft51uymuu46"]
+
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_72tb0"]
+[ext_resource type="Resource" uid="uid://cnr1k8seffsxb" path="res://items/plastic.tres" id="2_keal5"]
+[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="2_to5ff"]
+[ext_resource type="Resource" uid="uid://bjmledqi51eut" path="res://items/ssd_item.tres" id="3_xwndn"]
+[ext_resource type="Script" uid="uid://b4iu5xrdf0evs" path="res://crafting/craft_recipe.gd" id="4_6pl53"]
+[ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="5_7irxg"]
+[ext_resource type="Resource" uid="uid://d14wjbxictxb" path="res://items/dvd_drive.tres" id="6_hst8j"]
+[ext_resource type="Resource" uid="uid://b2tfv3l6feulr" path="res://items/battery.tres" id="7_c3mbv"]
+[ext_resource type="Resource" uid="uid://swd1m0hvep4c" path="res://items/small_psu_item.tres" id="8_gyqji"]
+[ext_resource type="Resource" uid="uid://bvcquf4e43r6r" path="res://items/laptop.tres" id="9_r23y8"]
+
+[resource]
+script = ExtResource("4_6pl53")
+ingredients = Array[ExtResource("1_72tb0")]([ExtResource("2_keal5"), ExtResource("2_to5ff"), ExtResource("2_keal5"), ExtResource("3_xwndn"), ExtResource("5_7irxg"), ExtResource("6_hst8j"), ExtResource("7_c3mbv"), ExtResource("8_gyqji"), ExtResource("7_c3mbv")])
+output = ExtResource("9_r23y8")
+metadata/_custom_type_script = "uid://b4iu5xrdf0evs"

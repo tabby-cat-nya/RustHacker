@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b2tfv3l6feulr"]
+
+[ext_resource type="Texture2D" uid="uid://buq3p18drxa52" path="res://assets/item images/laptop_battery.png" id="1_i7fpe"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_6iu4j"]
+
+[resource]
+script = ExtResource("2_6iu4j")
+item_name = "Battery"
+icon = ExtResource("1_i7fpe")
+bin_chance = 2
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

@@ -7,11 +7,11 @@
 [ext_resource type="Resource" uid="uid://bepkdyf7dn1y0" path="res://items/hdd_item.tres" id="3_ccdvw"]
 [ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="4_tkhhn"]
 [ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="5_tkhhn"]
-[ext_resource type="Resource" uid="uid://oc57emfpcnm0" path="res://items/gpu.tres" id="6_r0qw7"]
+[ext_resource type="Resource" uid="uid://d14wjbxictxb" path="res://items/dvd_drive.tres" id="6_uomls"]
 [ext_resource type="Resource" uid="uid://8vw85c1qrypm" path="res://items/computer.tres" id="8_uomls"]
 
 [resource]
 script = ExtResource("2_2p7jb")
-ingredients = Array[ExtResource("1_ayiw2")]([ExtResource("2_ccdvw"), ExtResource("4_tkhhn"), ExtResource("2_ccdvw"), ExtResource("3_ccdvw"), ExtResource("5_tkhhn"), ExtResource("6_r0qw7"), ExtResource("2_ccdvw"), ExtResource("2_egxug"), ExtResource("2_ccdvw")])
+ingredients = Array[ExtResource("1_ayiw2")]([ExtResource("2_ccdvw"), ExtResource("4_tkhhn"), ExtResource("2_ccdvw"), ExtResource("3_ccdvw"), ExtResource("5_tkhhn"), ExtResource("6_uomls"), ExtResource("2_ccdvw"), ExtResource("2_egxug"), ExtResource("2_ccdvw")])
 output = ExtResource("8_uomls")
 metadata/_custom_type_script = "uid://b4iu5xrdf0evs"

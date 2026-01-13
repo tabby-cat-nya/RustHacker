@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CraftRecipe" load_steps=8 format=3 uid="uid://ded25bvnk3n4f"]
+
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="1_vosbt"]
+[ext_resource type="Script" uid="uid://b4iu5xrdf0evs" path="res://crafting/craft_recipe.gd" id="2_84bi8"]
+[ext_resource type="Resource" uid="uid://bepkdyf7dn1y0" path="res://items/hdd_item.tres" id="2_feqo4"]
+[ext_resource type="Resource" uid="uid://b3uytlkfvj67f" path="res://items/gaming_computer.tres" id="3_cetg8"]
+[ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="4_3ls3j"]
+[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_5sfar"]
+[ext_resource type="Resource" uid="uid://be540abaa08ox" path="res://items/server.tres" id="6_cetg8"]
+
+[resource]
+script = ExtResource("2_84bi8")
+ingredients = Array[ExtResource("1_vosbt")]([ExtResource("2_feqo4"), ExtResource("2_feqo4"), ExtResource("2_feqo4"), ExtResource("3_cetg8"), ExtResource("4_3ls3j"), ExtResource("3_cetg8"), ExtResource("5_5sfar"), ExtResource("5_5sfar"), ExtResource("5_5sfar")])
+output = ExtResource("6_cetg8")
+metadata/_custom_type_script = "uid://b4iu5xrdf0evs"

@@ -1,0 +1,60 @@
+[gd_resource type="Resource" script_class="ScavengeRecipe" load_steps=18 format=3 uid="uid://c5fue42g8u8tt"]
+
+[ext_resource type="Resource" uid="uid://jrm0nf23h0a5" path="res://items/broken_laptop.tres" id="1_01qcv"]
+[ext_resource type="Resource" uid="uid://oc57emfpcnm0" path="res://items/gpu.tres" id="1_bdrs7"]
+[ext_resource type="Script" uid="uid://oa5rlx6ttwuj" path="res://crafting/rollableLoot.gd" id="2_01qcv"]
+[ext_resource type="Resource" uid="uid://cnr1k8seffsxb" path="res://items/plastic.tres" id="3_7kc11"]
+[ext_resource type="Resource" uid="uid://bepkdyf7dn1y0" path="res://items/hdd_item.tres" id="4_7kc11"]
+[ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="4_yqdve"]
+[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_4mdbd"]
+[ext_resource type="Script" uid="uid://boqr1fowaqmt0" path="res://crafting/scavenge_recipe.gd" id="6_41i4r"]
+[ext_resource type="Resource" uid="uid://bjmledqi51eut" path="res://items/ssd_item.tres" id="7_7kc11"]
+[ext_resource type="Resource" uid="uid://b2tfv3l6feulr" path="res://items/battery.tres" id="9_4mdbd"]
+
+[sub_resource type="Resource" id="Resource_yqdve"]
+script = ExtResource("2_01qcv")
+item = ExtResource("3_7kc11")
+chance = 4
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_4mdbd"]
+script = ExtResource("2_01qcv")
+item = ExtResource("4_7kc11")
+chance = 2
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_41i4r"]
+script = ExtResource("2_01qcv")
+item = ExtResource("5_4mdbd")
+chance = 2
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_u1nhl"]
+script = ExtResource("2_01qcv")
+item = ExtResource("1_bdrs7")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_cojsa"]
+script = ExtResource("2_01qcv")
+item = ExtResource("7_7kc11")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_4af7c"]
+script = ExtResource("2_01qcv")
+item = ExtResource("4_yqdve")
+chance = 2
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_4v3pw"]
+script = ExtResource("2_01qcv")
+item = ExtResource("9_4mdbd")
+chance = 2
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[resource]
+script = ExtResource("6_41i4r")
+input = ExtResource("1_01qcv")
+loot_pool = Array[ExtResource("2_01qcv")]([SubResource("Resource_yqdve"), SubResource("Resource_4mdbd"), SubResource("Resource_41i4r"), SubResource("Resource_u1nhl"), SubResource("Resource_cojsa"), SubResource("Resource_4af7c"), SubResource("Resource_4v3pw")])
+metadata/_custom_type_script = "uid://boqr1fowaqmt0"

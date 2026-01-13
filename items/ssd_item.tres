@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bjmledqi51eut"]
+
+[ext_resource type="StyleBox" uid="uid://dcnrpkhjhp4tk" path="res://inv_system/item_panels/rare.tres" id="1_kwg8r"]
+[ext_resource type="Texture2D" uid="uid://ebshnx1dbvex" path="res://assets/item images/ssd.png" id="2_amedr"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_kwg8r"]
+
+[resource]
+script = ExtResource("2_kwg8r")
+item_name = "Solid State Drive"
+icon = ExtResource("2_amedr")
+custom_panel_style = ExtResource("1_kwg8r")
+bin_chance = 3
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
