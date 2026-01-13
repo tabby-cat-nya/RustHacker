@@ -2,7 +2,7 @@ extends Control
 
 @export var bin_inventory : Inventory
 @export var loot_button : Button
-@export var loot_pool : Array[ItemData]
+#@export var loot_pool : Array[ItemData]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,8 +32,20 @@ func _on_loot_button_pressed() -> void:
 	#bin_inventory.add_item(pick_random_item())
 
 func pick_random_item() -> ItemData:
-	var icount = loot_pool.size()
-	return loot_pool[randi() % icount]
+	#var icount = loot_pool.size()
+	#return loot_pool[randi() % icount]
+	
+	var selected : ItemData
+	var total_chance : int = 0
+	for loot in RecipeManager.items :
+		total_chance += loot.bin_chance
+	var sel_chance : int = randi() % total_chance
+	for loot in RecipeManager.items:
+		if sel_chance >= 0:
+			selected = loot
+			sel_chance -= loot.bin_chance
+			
+	return selected
 
 
 func _on_return_button_pressed() -> void:

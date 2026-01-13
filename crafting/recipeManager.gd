@@ -5,6 +5,8 @@ var craft_recipes : Array[CraftRecipe]
 var crafts_dir : String = "res://crafting/crafts/"
 var scavenge_recipes : Array[ScavengeRecipe]
 var scavenges_dir : String = "res://crafting/scavenges/"
+var items : Array[ItemData]
+var items_dir : String = "res://items/"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -46,4 +48,16 @@ func load_recipes():
 			scavenge_recipes.append(load(scavenges_dir + file_name) as ScavengeRecipe)
 			file_name = dir.get_next()
 			
+	## ITEMS
+	dir = DirAccess.open(items_dir)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if (file_name.get_extension() == "remap"):
+				file_name = file_name.replace('.remap', '')
+			print(items_dir+file_name)
+			items.append(load(items_dir + file_name) as ItemData)
+			file_name = dir.get_next()
+	
 	recipes_loaded.emit()

@@ -1,17 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dsfal3m4siap2"]
+[gd_scene load_steps=6 format=3 uid="uid://dsfal3m4siap2"]
 
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="1_6uqi0"]
 [ext_resource type="Texture2D" uid="uid://dj487wauiay6i" path="res://assets/ewase bins.png" id="1_g14j6"]
 [ext_resource type="Script" uid="uid://dal8g1ce37r3w" path="res://demo_scene.gd" id="1_vbegm"]
-[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_ehkex"]
-[ext_resource type="Resource" uid="uid://bepkdyf7dn1y0" path="res://items/hdd_item.tres" id="3_ykrsh"]
-[ext_resource type="Resource" uid="uid://bcteljob51wfj" path="res://items/battery_item.tres" id="5_00tp4"]
-[ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_g14j6"]
-[ext_resource type="Resource" uid="uid://88v5bcyrgpob" path="res://items/large_psu_item.tres" id="6_77dp3"]
-[ext_resource type="Resource" uid="uid://swd1m0hvep4c" path="res://items/small_psu_item.tres" id="7_5tkv4"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="7_xersf"]
-[ext_resource type="Resource" uid="uid://bufa63unuppu5" path="res://items/cpu.tres" id="8_6pgwd"]
-[ext_resource type="Resource" uid="uid://oc57emfpcnm0" path="res://items/gpu.tres" id="9_p1n6o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_00tp4"]
 font_color = Color(1, 0, 0, 0.5764706)
@@ -27,7 +19,6 @@ mouse_filter = 2
 script = ExtResource("1_vbegm")
 bin_inventory = NodePath("BinPanel")
 loot_button = NodePath("LootButton")
-loot_pool = Array[ExtResource("2_ehkex")]([ExtResource("3_ykrsh"), ExtResource("5_g14j6"), ExtResource("5_00tp4"), ExtResource("6_77dp3"), ExtResource("7_5tkv4"), ExtResource("8_6pgwd"), ExtResource("9_p1n6o")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -3
