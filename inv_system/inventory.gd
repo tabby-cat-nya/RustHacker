@@ -17,7 +17,7 @@ func _ready() -> void:
 		slot.type = type
 	if type == "Inventory":
 		MouseTweaks.player_inventory = self
-	else:
+	elif type != "Install":
 		MouseTweaks.other_inventory = self
 	pass # Replace with function body.
 

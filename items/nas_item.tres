@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://3afonee3dw7"]
+
+[ext_resource type="StyleBox" uid="uid://dcnrpkhjhp4tk" path="res://inv_system/item_panels/rare.tres" id="1_wtpx3"]
+[ext_resource type="Texture2D" uid="uid://m68k8dqmcrfr" path="res://assets/item images/nas.png" id="2_wtpx3"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="3_tihsb"]
+
+[resource]
+script = ExtResource("3_tihsb")
+item_name = "NAS Box"
+icon = ExtResource("2_wtpx3")
+custom_panel_style = ExtResource("1_wtpx3")
+bin_chance = 0
+buy_value = 600
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

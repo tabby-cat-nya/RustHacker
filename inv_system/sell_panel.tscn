@@ -55,6 +55,6 @@ text = "1234"
 
 [node name="SellButton" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Sell!"
+text = "Sell! (Uses 15 time)"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SellButton" to="." method="_on_sell_button_pressed"]

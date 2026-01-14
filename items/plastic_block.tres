@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://u5u51q8erbkf"]
+
+[ext_resource type="Texture2D" uid="uid://b7tii4smwcurc" path="res://assets/item images/plastic.png" id="1_ad3tn"]
+[ext_resource type="StyleBox" uid="uid://ctni70631ksq7" path="res://inv_system/item_panels/uncommon.tres" id="1_ecsjn"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_ecsjn"]
+
+[resource]
+script = ExtResource("2_ecsjn")
+item_name = "Block of Plastic"
+icon = ExtResource("1_ad3tn")
+custom_panel_style = ExtResource("1_ecsjn")
+bin_chance = 0
+buy_value = 60
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

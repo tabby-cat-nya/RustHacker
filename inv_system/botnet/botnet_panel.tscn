@@ -1,0 +1,76 @@
+[gd_scene load_steps=4 format=3 uid="uid://nfd41hcidmju"]
+
+[ext_resource type="Script" uid="uid://du0kijn4lh5kb" path="res://inv_system/botnet/botnet_panel.gd" id="1_m02i1"]
+[ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="2_ngfss"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ti0ti"]
+font_color = Color(1, 0.75686276, 0, 0.4745098)
+
+[node name="InventoryPanel" type="PanelContainer" node_paths=PackedStringArray("install_button", "score_label", "slots", "grid", "inv_label")]
+offset_left = 51.0
+offset_top = 67.0
+offset_right = 403.0
+offset_bottom = 259.0
+script = ExtResource("1_m02i1")
+install_button = NodePath("MarginContainer/VBoxContainer/Button")
+score_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/Label2")
+inventory_name = "Install in Botnet"
+slots = [NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/ItemSlot")]
+type = "Install"
+grid = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer")
+inv_label = NodePath("MarginContainer/VBoxContainer/Label")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Inventory 1"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 5
+
+[node name="ItemSlot" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_ngfss")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Add a completed server to your botnet, (your main goal!)"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "(this action cannot be undone)"
+label_settings = SubResource("LabelSettings_ti0ti")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Install completed server"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Servers in your botnet:"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

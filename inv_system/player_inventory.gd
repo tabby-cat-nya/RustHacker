@@ -4,6 +4,7 @@ extends Node
 @export var button : Button
 @export var money : int = 0
 @export var money_label : Label
+@export var botnet_servers : int = 0 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
