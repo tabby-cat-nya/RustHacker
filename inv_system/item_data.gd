@@ -6,3 +6,5 @@ class_name ItemData
 @export var value : String
 @export var custom_panel_style : StyleBox
 @export var bin_chance : int = 5
+@export var buy_value : int = 10
+@export var can_buy : bool = false

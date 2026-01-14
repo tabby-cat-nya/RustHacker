@@ -2,6 +2,8 @@ extends Node
 
 @export var inventory_panel : Inventory
 @export var button : Button
+@export var money : int = 0
+@export var money_label : Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +13,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	money_label.text = "Money: $" + str(money)
 
 
 func _on_button_pressed() -> void:

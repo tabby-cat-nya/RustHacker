@@ -10,4 +10,5 @@ item_name = "Server"
 icon = ExtResource("2_5q0ct")
 custom_panel_style = ExtResource("1_70din")
 bin_chance = 0
+buy_value = 2000
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

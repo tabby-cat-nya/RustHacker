@@ -10,4 +10,6 @@ item_name = "Solid State Drive"
 icon = ExtResource("2_amedr")
 custom_panel_style = ExtResource("1_kwg8r")
 bin_chance = 3
+buy_value = 140
+can_buy = true
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

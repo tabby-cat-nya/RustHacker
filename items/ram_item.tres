@@ -7,4 +7,6 @@
 script = ExtResource("1_0t7ph")
 item_name = "Ram Stick"
 icon = ExtResource("1_bfuag")
+buy_value = 80
+can_buy = true
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

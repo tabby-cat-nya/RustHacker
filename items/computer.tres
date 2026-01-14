@@ -10,4 +10,5 @@ item_name = "Computer"
 icon = ExtResource("1_e0dbh")
 custom_panel_style = ExtResource("1_x7wm3")
 bin_chance = 0
+buy_value = 500
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

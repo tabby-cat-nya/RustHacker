@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cluhvm32w5321"]
+
+[ext_resource type="Script" uid="uid://cplyptfsma786" path="res://shop/listing.gd" id="1_ir6io"]
+[ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="1_uc81x"]
+
+[node name="listing" type="HBoxContainer" node_paths=PackedStringArray("item_slot", "button")]
+size_flags_horizontal = 3
+alignment = 1
+script = ExtResource("1_ir6io")
+item_slot = NodePath("ItemSlot2")
+button = NodePath("Button")
+
+[node name="ItemSlot2" parent="." instance=ExtResource("1_uc81x")]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Buy $99999"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

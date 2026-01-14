@@ -24,4 +24,4 @@ func _on_goto_ewaste_pressed() -> void:
 
 
 func _on_goto_computer_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/computer.tscn")
+	get_tree().change_scene_to_file("res://scenes/room.tscn")

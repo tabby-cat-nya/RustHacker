@@ -18,5 +18,9 @@ func scavs_ready():
 		var new_slot = load("res://inv_system/item_slot.tscn").instantiate() as ItemSlot
 		new_slot.item = scav.input
 		new_slot.block_taking = true
+		var scav_preview : String = str(scav.rolls) + " Rolls"
+		for loot in scav.loot_pool:
+			scav_preview += "\n" + loot.item.item_name + " : " + str(loot.chance) + " Chance"
+		new_slot.extra_data = scav_preview
 		grid.add_child(new_slot)
 		pass
