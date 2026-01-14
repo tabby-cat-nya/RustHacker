@@ -122,8 +122,3 @@ func _on_action_button_pressed() -> void:
 			add_item(matched_recipe.roll())
 		check_recipes()
 	pass # Replace with function body.
-
-func empty_grid():
-	for slot in slots:
-		slot.item = null
-		slot.update_ui()

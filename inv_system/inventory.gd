@@ -52,3 +52,8 @@ func filled_slots() -> int:
 		if slot.item:
 			count += 1
 	return count
+
+func empty_grid():
+	for slot in slots:
+		slot.item = null
+		slot.update_ui()

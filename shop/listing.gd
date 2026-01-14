@@ -13,7 +13,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if item_slot.item:
-		button.disabled = PlayerInventory.money <= item_cost
+		button.disabled = PlayerInventory.money < item_cost
 
 func prepare(item : ItemData):
 	item_slot.item = item

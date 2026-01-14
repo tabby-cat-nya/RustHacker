@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	pass
 
 func make_listings():
-	print("building meowbay")
+	#print("building meowbay")
 	for item in RecipeManager.items:
 		if item.can_buy:
 			var new_listing = load("res://shop/listing.tscn").instantiate()

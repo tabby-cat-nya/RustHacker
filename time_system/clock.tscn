@@ -8,7 +8,7 @@
 [sub_resource type="LabelSettings" id="LabelSettings_r3ygl"]
 font_size = 32
 
-[node name="Clock" type="Control" node_paths=PackedStringArray("bar", "timer_text", "days_text")]
+[node name="Clock" type="Control" node_paths=PackedStringArray("bar", "timer_text", "days_text", "next_button")]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -21,6 +21,7 @@ script = ExtResource("1_m6rn1")
 bar = NodePath("PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar")
 timer_text = NodePath("PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar/PanelContainer/Label")
 days_text = NodePath("PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Label")
+next_button = NodePath("PanelContainer/VBoxContainer/NextDay")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkhg56q71vsjv"]
+[gd_scene load_steps=10 format=3 uid="uid://bkhg56q71vsjv"]
 
 [ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="2_hk4hx"]
@@ -41,6 +41,10 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdgfq"]
+font_size = 24
+font_color = Color(1, 0.7490196, 0, 1)
 
 [node name="PlayerInventory" type="Control" node_paths=PackedStringArray("inventory_panel", "button", "money_label")]
 z_index = 2
@@ -261,6 +265,7 @@ offset_bottom = 608.0
 [node name="Label" type="Label" parent="PanelContainer"]
 layout_mode = 2
 text = "Money: $0"
+label_settings = SubResource("LabelSettings_bdgfq")
 horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
