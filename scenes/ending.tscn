@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_2x1jc")
-server_box = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer")
+server_box = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/botnet display")
 score_label = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScoreL")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -64,8 +64,10 @@ layout_mode = 2
 text = "You launch your botnet filling the internet with catgirls!"
 horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="botnet display" type="HFlowContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
 alignment = 1
 
 [node name="ScoreL" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]

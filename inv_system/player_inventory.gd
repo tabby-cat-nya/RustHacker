@@ -5,6 +5,8 @@ extends Node
 @export var money : int = 0
 @export var money_label : Label
 @export var botnet_servers : int = 0 
+@export var botnet : Array[ItemData] = []
+@export var power_values : Dictionary[ItemData,int]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

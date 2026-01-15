@@ -1,10 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkhg56q71vsjv"]
+[gd_scene load_steps=15 format=3 uid="uid://bkhg56q71vsjv"]
 
 [ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="2_hk4hx"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_l456l"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="3_8qgtd"]
+[ext_resource type="Resource" uid="uid://be540abaa08ox" path="res://items/server.tres" id="3_77dmv"]
 [ext_resource type="Script" uid="uid://chxgum3v3d1o7" path="res://crafting/recipe book/recipie_book.gd" id="4_bdgfq"]
+[ext_resource type="Resource" uid="uid://b3uytlkfvj67f" path="res://items/gaming_computer.tres" id="4_txpda"]
 [ext_resource type="Script" uid="uid://drm5jfhadys7l" path="res://crafting/recipe book/scavengeBook.gd" id="5_bdgfq"]
+[ext_resource type="Resource" uid="uid://8vw85c1qrypm" path="res://items/computer.tres" id="5_klg10"]
+[ext_resource type="Resource" uid="uid://bvcquf4e43r6r" path="res://items/laptop.tres" id="6_xr7r7"]
+[ext_resource type="Resource" uid="uid://3afonee3dw7" path="res://items/nas_item.tres" id="7_g2557"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icm48"]
 content_margin_left = 0.0
@@ -47,6 +53,13 @@ script = ExtResource("1_vk2kx")
 inventory_panel = NodePath("Inventory")
 button = NodePath("Button")
 money_label = NodePath("PanelContainer/Label")
+power_values = Dictionary[ExtResource("2_l456l"), int]({
+ExtResource("3_77dmv"): 10,
+ExtResource("4_txpda"): 4,
+ExtResource("5_klg10"): 2,
+ExtResource("6_xr7r7"): 3,
+ExtResource("7_g2557"): 2
+})
 
 [node name="Button" type="Button" parent="."]
 visible = false

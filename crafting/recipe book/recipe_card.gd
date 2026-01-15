@@ -25,6 +25,9 @@ func show_recipe(recipe : CraftRecipe):
 		ingredient_slots[x].update_ui()
 		ingredient_slots[x].block_taking = true
 	output_slot.item = recipe.output
+	if (PlayerInventory.power_values.has(recipe.output)):
+		output_slot.extra_data = "Botnet Power: " + str(PlayerInventory.power_values.get(recipe.output))
+	
 	output_slot.update_ui()
 	output_slot.block_taking = true
 	output_label.text = recipe.output.item_name

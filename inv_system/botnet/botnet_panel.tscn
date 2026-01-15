@@ -1,19 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://nfd41hcidmju"]
+[gd_scene load_steps=3 format=3 uid="uid://nfd41hcidmju"]
 
 [ext_resource type="Script" uid="uid://du0kijn4lh5kb" path="res://inv_system/botnet/botnet_panel.gd" id="1_m02i1"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="2_ngfss"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ti0ti"]
-font_color = Color(1, 0.75686276, 0, 0.4745098)
-
-[node name="InventoryPanel" type="PanelContainer" node_paths=PackedStringArray("install_button", "score_label", "slots", "grid", "inv_label")]
+[node name="InventoryPanel" type="PanelContainer" node_paths=PackedStringArray("install_button", "score_label", "power_predict", "slots", "grid", "inv_label")]
 offset_left = 51.0
 offset_top = 67.0
 offset_right = 403.0
 offset_bottom = 259.0
 script = ExtResource("1_m02i1")
 install_button = NodePath("MarginContainer/VBoxContainer/Button")
-score_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/Label2")
+score_label = NodePath("MarginContainer/VBoxContainer/HBoxContainer2/score")
+power_predict = NodePath("MarginContainer/VBoxContainer/predict")
 inventory_name = "Install in Botnet"
 slots = [NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/ItemSlot")]
 type = "Install"
@@ -49,18 +47,20 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Add a completed server to your botnet, (your main goal!)"
+text = "Add a completed device to your botnet, (your main goal!)"
 autowrap_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="predict" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0.5921569)
 layout_mode = 2
-text = "(this action cannot be undone)"
-label_settings = SubResource("LabelSettings_ti0ti")
+bbcode_enabled = true
+text = "[pulse]Insert a device to predict power"
+fit_content = true
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Install completed server"
+text = "Install Device"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -68,9 +68,9 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-text = "Servers in your botnet:"
+text = "Total Botnet Power:"
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="score" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 text = "0"
 
