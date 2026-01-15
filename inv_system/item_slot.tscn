@@ -9,7 +9,7 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon", "label")]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(50, 50)
 theme_override_styles/panel = ExtResource("1_mkcpq")
 script = ExtResource("1_m11ft")
 icon = NodePath("Icon")
@@ -22,7 +22,7 @@ anchor_left = 0.1
 anchor_top = 0.1
 anchor_right = 0.8
 anchor_bottom = 0.9
-offset_right = 6.4000015
+offset_right = 5.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_0tnt0")

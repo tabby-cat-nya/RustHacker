@@ -43,6 +43,7 @@ size_flags_vertical = 3
 columns = 5
 
 [node name="ItemSlot" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_ngfss")]
+custom_minimum_size = Vector2(64, 64)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]

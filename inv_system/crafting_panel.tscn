@@ -76,10 +76,10 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [node name="CraftingPanel" type="PanelContainer" node_paths=PackedStringArray("action_button", "grid", "inv_label")]
-offset_left = 749.0
-offset_top = 89.0
-offset_right = 962.0
-offset_bottom = 382.0
+offset_left = 820.0
+offset_top = 159.0
+offset_right = 989.0
+offset_bottom = 414.0
 script = ExtResource("1_441s3")
 action_button = NodePath("MarginContainer/VBoxContainer/ActionButton")
 assemble_style = SubResource("StyleBoxFlat_h0v0h")
@@ -147,6 +147,7 @@ layout_mode = 2
 [node name="ActionButton" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 52.585)
 layout_mode = 2
-text = "No matching recipie"
+text = "No matching 
+recipie"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/ActionButton" to="." method="_on_action_button_pressed"]

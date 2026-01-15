@@ -1,22 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://bkhg56q71vsjv"]
+[gd_scene load_steps=9 format=3 uid="uid://bkhg56q71vsjv"]
 
 [ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="2_hk4hx"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="3_8qgtd"]
 [ext_resource type="Script" uid="uid://chxgum3v3d1o7" path="res://crafting/recipe book/recipie_book.gd" id="4_bdgfq"]
 [ext_resource type="Script" uid="uid://drm5jfhadys7l" path="res://crafting/recipe book/scavengeBook.gd" id="5_bdgfq"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jtfh"]
-content_margin_left = 0.0
-content_margin_top = 0.0
-content_margin_right = 0.0
-content_margin_bottom = 0.0
-bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icm48"]
 content_margin_left = 0.0
@@ -56,7 +44,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_vk2kx")
-inventory_panel = NodePath("TabContainer/Inventory")
+inventory_panel = NodePath("Inventory")
 button = NodePath("Button")
 money_label = NodePath("PanelContainer/Label")
 
@@ -71,144 +59,150 @@ offset_right = 129.0
 grow_vertical = 0
 text = "Show Inventory"
 
-[node name="TabContainer" type="TabContainer" parent="."]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 67.0
-offset_right = 431.0
-offset_bottom = 544.0
-current_tab = 0
-
-[node name="Inventory" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("grid", "inv_label")]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_2jtfh")
+[node name="Inventory" type="PanelContainer" parent="." node_paths=PackedStringArray("grid", "inv_label")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = 154.0
+offset_right = -635.0
+offset_bottom = -136.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("2_hk4hx")
 inventory_name = "Your Inventory"
 type = "Inventory"
 grid = NodePath("MarginContainer/VBoxContainer/ScrollContainer/GridContainer")
 inv_label = NodePath("MarginContainer/VBoxContainer/Label")
-metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Inventory"]
+[node name="MarginContainer" type="MarginContainer" parent="Inventory"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Inventory/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Inventory/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/Inventory/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Inventory/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Inventory 1"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Inventory/MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Inventory/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="GridContainer" type="GridContainer" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 columns = 5
 
-[node name="ItemSlot" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot2" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot2" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot3" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot3" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot4" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot4" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot5" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot5" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot6" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot6" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot7" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot7" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot8" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot8" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot9" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot9" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot10" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot10" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot11" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot11" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot12" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot12" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot13" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot13" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot14" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot14" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot15" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot15" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot16" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot16" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot17" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot17" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot18" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot18" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot19" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot19" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot20" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot20" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot21" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot21" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot22" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot22" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot23" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot23" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot24" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot24" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot25" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot25" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot26" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot26" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot27" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot27" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot28" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot28" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot29" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot29" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
-[node name="ItemSlot30" parent="TabContainer/Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+[node name="ItemSlot30" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 126.0
+offset_right = 237.0
+offset_bottom = 603.0
+current_tab = 0
 
 [node name="Recipie Book" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("vbox")]
-visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_icm48")
 script = ExtResource("4_bdgfq")
 vbox = NodePath("MarginContainer/ScrollContainer/VBoxContainer")
-metadata/_tab_index = 1
+metadata/_tab_index = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Recipie Book"]
 layout_mode = 2
@@ -233,7 +227,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8qgtd")
 script = ExtResource("5_bdgfq")
 grid = NodePath("MarginContainer/VBoxContainer/GridContainer")
-metadata/_tab_index = 2
+metadata/_tab_index = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="TabContainer/Scavenge"]
 layout_mode = 2
@@ -253,14 +247,15 @@ autowrap_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="TabContainer/Scavenge/MarginContainer/VBoxContainer"]
 layout_mode = 2
-columns = 5
+size_flags_horizontal = 4
+columns = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
-offset_left = 132.0
-offset_top = 566.0
-offset_right = 389.0
-offset_bottom = 608.0
+offset_left = 250.0
+offset_top = 525.0
+offset_right = 507.0
+offset_bottom = 567.0
 
 [node name="Label" type="Label" parent="PanelContainer"]
 layout_mode = 2
