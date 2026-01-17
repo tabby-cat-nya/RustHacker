@@ -23,8 +23,9 @@ func _on_play_button_pressed() -> void:
 	PlayerInventory.show()
 	Clock.show()
 	Locations.show()
-	Locations.current_location = Locations.Location.workshop
-	get_tree().change_scene_to_file("res://scenes/workshop.tscn")
+	Locations.goto_workshop()
+	#Locations.current_location = Locations.Location.workshop
+	#get_tree().change_scene_to_file("res://scenes/workshop.tscn")
 
 
 func _on_credits_button_pressed() -> void:

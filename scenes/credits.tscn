@@ -182,6 +182,7 @@ text = "[center]Icons[/center][ul]
 [url=https://www.flaticon.com/free-icon/renovation_2825738]Rennovation Icon by Freepik[/url]
 [url=https://www.flaticon.com/free-icon/home_25694]Home Icon by Dave Gandy[/url]
 [url=https://www.flaticon.com/free-icon/home_25694]Volume Icon by Bharat Icons[/url]
+[url=https://kenney.nl/assets/input-prompts]Input Glyphs by Kenny[/url]
 [/ul][center]Items[/center][ul]
 [url=https://www.umart.com.au/product/corsair-cx750-series-750w-80-bronze-non-modular-atx-power-supply-cp-9020279-au-77539]Large Power Supply[/url]
 [url=https://sanmarcoscomputers.com/laptop-screen-repair/]Broken Laptop[/url]
@@ -199,7 +200,10 @@ text = "[center]Icons[/center][ul]
 [url=https://www.advantech.com/emt/products/atx-power-supply/sub_2d9aae24-dfb2-4741-bec5-62dca5bc9cd3]Small Power Supply[/url]
 [url=https://www.ebay.com.au/itm/394942125788]SSD[/url]
 [url=https://www.fingers.co.in/computer-peripherals/power-protection-ups/fr--1250lcd]UPS[/url]
-[url=https://simple.wikipedia.org/wiki/Compact_disc]Disc[/url]"
+[url=https://simple.wikipedia.org/wiki/Compact_disc]Disc[/url]
+
+
+"
 fit_content = true
 
 [node name="MenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]

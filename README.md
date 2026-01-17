@@ -24,8 +24,8 @@
 - [x] Disk drives scavenge to disks of varying rarity worth $$$
 	- [x] scavenge rolls can produce nothing?
 - [x] balancing recipes
-- [ ] sound effects
-- [ ] mixed bag random?
+- [ ] sound effects - stretch goal
+- [ ] mixed bag random? - stretch goal
 
 Submission day: Jan 19th 8AM
 
@@ -82,3 +82,15 @@ https://www.flaticon.com/free-icon/bin_484611
 https://www.flaticon.com/free-icon/volume-up_6996058
 
 Glyphs - https://kenney.nl/assets/input-prompts
+
+### Name Ideas
+rust, hacking, looting, ewaste, repurposing, 
+- Rust to Ritches
+- Ewaste Looting Simulator
+- Ewaste, Just a week away
+- Catgirl Rust Hacker
+- reddit 2
+some sort of acronym - RUST, REDDIT, UTS, CAT, CATGIRL
+- Reclaim U System Takeover
+
+https://cooltext.com/Edit-Logo?LogoID=5002855292&5002855292_Gradient2=Frost%20Black%2001

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5dh55o5mgima"]
+[gd_scene load_steps=8 format=3 uid="uid://b5dh55o5mgima"]
 
 [ext_resource type="Script" uid="uid://bxymsudka4nnb" path="res://scenes/manager/location_manager.gd" id="1_o5d0c"]
 [ext_resource type="Texture2D" uid="uid://m10v3leibbil" path="res://assets/icons/bin.png" id="2_qjxm7"]
@@ -18,7 +18,24 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="LocationManager" type="Control" node_paths=PackedStringArray("ewaste_button", "workshop_button", "room_button", "move_blocker_panel")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjxm7"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 0, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="LocationManager" type="Control" node_paths=PackedStringArray("ewaste_button", "workshop_button", "room_button", "move_blocker_panel", "selection_indicator")]
 z_index = 3
 layout_mode = 3
 anchors_preset = 15
@@ -34,6 +51,7 @@ ewaste_button = NodePath("PanelContainer/VBoxContainer/MoveEwaste")
 workshop_button = NodePath("PanelContainer/VBoxContainer/MoveWorkshop")
 room_button = NodePath("PanelContainer/VBoxContainer/MoveHome")
 move_blocker_panel = NodePath("Move blocker")
+selection_indicator = NodePath("PanelContainer/VBoxContainer/MoveWorkshop/Selected")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -54,11 +72,22 @@ icon = ExtResource("2_qjxm7")
 layout_mode = 2
 icon = ExtResource("3_1ogtx")
 
+[node name="Selected" type="Panel" parent="PanelContainer/VBoxContainer/MoveWorkshop"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qjxm7")
+
 [node name="MoveHome" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_5p1uq")
 
 [node name="Move blocker" type="PanelContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 603.0
 offset_top = 165.0
