@@ -18,7 +18,7 @@
 	- [ ]  1-19		mew
 	- [ ] 20-39		winning
 	- [ ] 40-59		winning more
-	- [ ] 60+		winning most
+	- [ ] 60+		winning most or maybe 50+?
 - [ ] soundtrack - kane working on something
 - [x] credit/replace images - square images that fit in the item slot box
 - [x] Disk drives scavenge to disks of varying rarity worth $$$

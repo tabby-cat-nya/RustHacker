@@ -15,7 +15,7 @@ func _ready() -> void:
 	for device in PlayerInventory.botnet:
 		var new_slot : ItemSlot = load("res://inv_system/item_slot.tscn").instantiate()
 		new_slot.item = device
-		new_slot.extra_data = "Power: " + str(PlayerInventory.power_values.get(device))
+		new_slot.extra_data = "Power: " + str(device.botnet_power)
 		new_slot.update_ui()
 		new_slot.block_taking = true
 		server_box.add_child(new_slot)
