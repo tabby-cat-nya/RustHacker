@@ -66,19 +66,30 @@ fit_content = true
 
 [node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Your goal is to build a botnet of servers so you can take over the internet with catgirls. You have 7 days to loot the ewaste before building management realises what you're up to and you have to escape"
+text = "Your goal is to build a botnet of devices so you can take over the internet with catgirls. You have 7 days to loot the ewaste before building management realises what you're up to and you have to escape"
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 modulate = Color(0, 1, 0, 1)
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Play!"
 
+[node name="CreditsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+modulate = Color(1, 0.44313726, 1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "View Credits"
+
 [node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 bbcode_enabled = true
 text = "[i]Credits[/i]
@@ -89,6 +100,7 @@ Item Icons: (todo)"
 fit_content = true
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
@@ -96,4 +108,5 @@ layout_mode = 2
 text = "tip: you can quickly move items between inventories with Shift+Click"
 horizontal_alignment = 1
 
-[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]

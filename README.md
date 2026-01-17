@@ -43,6 +43,8 @@ Submission day: Jan 19th 8AM
 - [x] disable loot button if no time
 - [x] show percentage chances for scavenging
 - [x] trash slto
+- [x] onyl display sell value if > 0
+- [x] link menu to credits screen
 
 # Maintain motivation by setting milestones and showing progress when you reach them!
 1. [x] Gettign a random assortment of loot from the ewaste bin

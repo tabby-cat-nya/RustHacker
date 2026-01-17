@@ -12,23 +12,26 @@
 
 [sub_resource type="Resource" id="Resource_7lgdl"]
 script = ExtResource("6_7lgdl")
-item_name = "Unlimited_Gaming (Kane)"
+item_name = "Unlimited_Gaming"
 icon = ExtResource("5_ih6pn")
 custom_panel_style = ExtResource("5_ooihk")
+buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
 
 [sub_resource type="Resource" id="Resource_qbfqv"]
 script = ExtResource("6_7lgdl")
-item_name = "Maxie"
+item_name = "Spacey"
 icon = ExtResource("8_7lgdl")
 custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
 
 [sub_resource type="Resource" id="Resource_x5q3x"]
 script = ExtResource("6_7lgdl")
-item_name = "Unlimited_Gaming (Kane)"
+item_name = "Unlimited_Gaming"
 icon = ExtResource("5_ih6pn")
 custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
 
 [sub_resource type="Resource" id="Resource_nmdnh"]
@@ -36,6 +39,7 @@ script = ExtResource("6_7lgdl")
 item_name = "Spantle"
 icon = ExtResource("9_c6kru")
 custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
 
 [node name="Credits" type="Control"]
@@ -182,3 +186,9 @@ text = "[center]Icons[/center][ul]
 [url=https://www.fingers.co.in/computer-peripherals/power-protection-ups/fr--1250lcd]UPS[/url]
 [url=https://simple.wikipedia.org/wiki/Compact_disc]Disc[/url]"
 fit_content = true
+
+[node name="MenuButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Back to Menu"
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]

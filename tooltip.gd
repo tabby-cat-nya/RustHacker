@@ -15,7 +15,9 @@ func _process(delta: float) -> void:
 	global_position = get_global_mouse_position() + Vector2(12,-6)
 
 func show_tip(item : ItemData, extra : String = ""):
-	tooltip_label.text = item.item_name + "\nSell Value: $"+str(floori(item.buy_value/float(2)))
+	tooltip_label.text = item.item_name
+	if item.buy_value > 0:
+		tooltip_label.text += "\nSell Value: $"+str(floori(item.buy_value/float(2)))
 	if item.botnet_power > 0:
 		tooltip_label.text += "\n[color=orchid]Botnet Power: " + str(item.botnet_power) +"[/color]"
 	if extra != "":

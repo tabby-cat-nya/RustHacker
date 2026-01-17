@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_d6fvv")
-item_name = "Uninterruptible power supply"
+item_name = "Uninterruptible Power Supply"
 icon = ExtResource("2_pugmu")
 custom_panel_style = ExtResource("1_pugmu")
 bin_chance = 0
