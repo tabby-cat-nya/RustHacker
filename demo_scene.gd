@@ -11,7 +11,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	Locations.block_moving = bin_inventory.filled_slots() > 0
+	loot_button.disabled = not Clock.has_time(10)
 
 
 func _on_loot_button_pressed() -> void:
@@ -50,3 +51,7 @@ func pick_random_item() -> ItemData:
 
 func _on_return_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/workshop.tscn")
+
+
+func _on_delete_pressed() -> void:
+	bin_inventory.empty_grid()

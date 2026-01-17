@@ -53,6 +53,13 @@ func filled_slots() -> int:
 			count += 1
 	return count
 
+func empty_spots() -> int:
+	var count : int = 0
+	for slot in slots:
+		if not slot.item:
+			count += 1
+	return count
+
 func empty_grid():
 	for slot in slots:
 		slot.item = null

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cu2yyw3f2avub"]
+[gd_scene load_steps=7 format=3 uid="uid://cu2yyw3f2avub"]
 
 [ext_resource type="Script" uid="uid://cq6xhdlib6c50" path="res://scenes/room.gd" id="1_8pqrt"]
 [ext_resource type="Texture2D" uid="uid://crdbk8wkw63k0" path="res://assets/computer.png" id="1_om4aa"]
 [ext_resource type="PackedScene" uid="uid://cqqpf7fca5nk1" path="res://inv_system/sell_panel.tscn" id="3_85yof"]
 [ext_resource type="Script" uid="uid://bxdc7rrd22mlr" path="res://shop/meowbay.gd" id="4_jxe34"]
+[ext_resource type="StyleBox" uid="uid://12bvcki7fqij" path="res://scenes/manager/nuhuh stylebox.tres" id="5_jn645"]
 [ext_resource type="PackedScene" uid="uid://nfd41hcidmju" path="res://inv_system/botnet/botnet_panel.tscn" id="5_jxe34"]
 
 [node name="room" type="Control" node_paths=PackedStringArray("sell_panel", "botnet_panel", "workshop_button")]
@@ -31,6 +32,7 @@ texture = ExtResource("1_om4aa")
 expand_mode = 3
 
 [node name="GotoWorkshop" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,7 +54,7 @@ offset_top = 148.0
 offset_right = 1143.0
 offset_bottom = 270.00018
 
-[node name="meowbay" type="PanelContainer" parent="." node_paths=PackedStringArray("listing_grid")]
+[node name="meowbay" type="PanelContainer" parent="." node_paths=PackedStringArray("listing_grid", "block_buy")]
 layout_mode = 0
 offset_left = 790.0
 offset_top = 291.46
@@ -60,6 +62,7 @@ offset_right = 1143.0
 offset_bottom = 590.4607
 script = ExtResource("4_jxe34")
 listing_grid = NodePath("ScrollContainer/VBoxContainer/listings")
+block_buy = NodePath("block_buy")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="meowbay"]
 layout_mode = 2
@@ -78,6 +81,22 @@ fit_content = true
 layout_mode = 2
 size_flags_horizontal = 3
 columns = 2
+
+[node name="block_buy" type="MarginContainer" parent="meowbay"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BlockBuying" type="PanelContainer" parent="meowbay/block_buy"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("5_jn645")
+
+[node name="Label" type="Label" parent="meowbay/block_buy/BlockBuying"]
+layout_mode = 2
+text = "Cannot buy: Inventory Full!"
+horizontal_alignment = 1
 
 [node name="BotnetPanel" parent="." instance=ExtResource("5_jxe34")]
 layout_mode = 0

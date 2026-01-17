@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5dh55o5mgima"]
+
+[ext_resource type="Script" uid="uid://bxymsudka4nnb" path="res://scenes/manager/location_manager.gd" id="1_o5d0c"]
+[ext_resource type="Texture2D" uid="uid://m10v3leibbil" path="res://assets/icons/bin.png" id="2_qjxm7"]
+[ext_resource type="Texture2D" uid="uid://bqnjkty8ofuw4" path="res://assets/icons/workshop.png" id="3_1ogtx"]
+[ext_resource type="Texture2D" uid="uid://c3ti7dy7kvfml" path="res://assets/icons/home.png" id="4_5p1uq"]
+[ext_resource type="StyleBox" uid="uid://12bvcki7fqij" path="res://scenes/manager/nuhuh stylebox.tres" id="5_qjxm7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dc45l"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="LocationManager" type="Control" node_paths=PackedStringArray("ewaste_button", "workshop_button", "room_button", "move_blocker_panel")]
+z_index = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_o5d0c")
+normal_color = Color(1, 1, 1, 1)
+selected_color = Color(1, 1, 0, 1)
+ewaste_button = NodePath("PanelContainer/VBoxContainer/MoveEwaste")
+workshop_button = NodePath("PanelContainer/VBoxContainer/MoveWorkshop")
+room_button = NodePath("PanelContainer/VBoxContainer/MoveHome")
+move_blocker_panel = NodePath("Move blocker")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 175.0
+offset_right = 687.0
+offset_bottom = 399.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dc45l")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="MoveEwaste" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("2_qjxm7")
+
+[node name="MoveWorkshop" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_1ogtx")
+
+[node name="MoveHome" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_5p1uq")
+
+[node name="Move blocker" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 603.0
+offset_top = 165.0
+offset_right = 699.0
+offset_bottom = 409.0
+theme_override_styles/panel = ExtResource("5_qjxm7")
+
+[node name="Label" type="Label" parent="Move blocker"]
+layout_mode = 2
+text = "Cannot move"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MoveEwaste" to="." method="goto_ewaste"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MoveWorkshop" to="." method="goto_workshop"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/MoveHome" to="." method="goto_room"]

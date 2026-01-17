@@ -39,4 +39,5 @@ func _on_next_day_pressed() -> void:
 		get_tree().change_scene_to_file("res://scenes/ending.tscn")
 		PlayerInventory.hide()
 		Clock.hide()
+		Locations.hide()
 		pass

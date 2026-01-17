@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	workshop_button.disabled = sell_panel.filled_slots() > 0 or botnet_panel.filled_slots() > 0
+	Locations.block_moving = sell_panel.filled_slots() > 0 or botnet_panel.filled_slots() > 0
 	pass
 
 

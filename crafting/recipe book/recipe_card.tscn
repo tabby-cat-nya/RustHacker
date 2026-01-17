@@ -1,13 +1,31 @@
-[gd_scene load_steps=5 format=3 uid="uid://btenxre8yvynx"]
+[gd_scene load_steps=6 format=3 uid="uid://btenxre8yvynx"]
 
 [ext_resource type="Script" uid="uid://mvqohkfd6whc" path="res://crafting/recipe book/recipe_card.gd" id="1_8t2l7"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="1_ebtwo"]
 [ext_resource type="Texture2D" uid="uid://cu18nhutsu0ov" path="res://assets/craftarrow.png" id="3_qstsn"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qstsn"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="LabelSettings" id="LabelSettings_qstsn"]
-font_size = 10
+font_size = 8
 
 [node name="Recipe Card" type="PanelContainer" node_paths=PackedStringArray("grid_container", "output_slot", "output_label")]
+theme_override_styles/panel = SubResource("StyleBoxFlat_qstsn")
 script = ExtResource("1_8t2l7")
 grid_container = NodePath("HBoxContainer/GridContainer")
 output_slot = NodePath("HBoxContainer/VBoxContainer/ItemSlot10")

@@ -11,12 +11,13 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if crafting_inv.filled_slots() > 0:
-		ewaste_button.disabled = true
-		computer_button.disabled = true
-	else:
-		ewaste_button.disabled = false
-		computer_button.disabled = false
+	Locations.block_moving = crafting_inv.filled_slots() > 0
+	#if crafting_inv.filled_slots() > 0:
+		#ewaste_button.disabled = true
+		#computer_button.disabled = true
+	#else:
+		#ewaste_button.disabled = false
+		#computer_button.disabled = false
 
 
 func _on_goto_ewaste_pressed() -> void:

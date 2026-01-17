@@ -22,6 +22,7 @@ PlayerInventory="*res://inv_system/player_inventory.tscn"
 Clock="*res://time_system/clock.tscn"
 MouseTweaks="*res://mouseTweaks.gd"
 RecipeManager="*res://crafting/recipeManager.gd"
+Locations="*res://scenes/manager/locations panel.tscn"
 
 [display]
 

@@ -80,7 +80,7 @@ text = "Play!"
 [node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[i]Credits
+text = "[i]Credits[/i]
 [ul]Soundtrack by Kane
 Playtesting: Maxie, Kane, Sarantis
 Octodemy's Inventory Tutorial

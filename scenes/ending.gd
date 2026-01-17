@@ -40,4 +40,6 @@ func _on_reset_button_pressed() -> void:
 	PlayerInventory.botnet.clear()
 	PlayerInventory.show()
 	Clock.show()
+	Locations.show()
+	Locations.current_location = Locations.Location.workshop
 	get_tree().change_scene_to_file("res://scenes/workshop.tscn")

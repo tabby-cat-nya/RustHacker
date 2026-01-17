@@ -26,19 +26,20 @@
 Submission day: Jan 19th 8AM
 
 ## Bugs / Fixes
-- [ ] Add Sarantis to playtesters list
+- [x] Add Sarantis to playtesters list
 - [ ] Volume slider for music
-- [ ] Change GOU rarity border to epic
+- [x] Change GPU rarity border to epic
 - [ ] Refresh sell (and botnet) button when changes to next day
 - [ ] Improve tooltips - sell value, botnet value, scavengable?, flavour text
-- [ ] Make location buttons static / icons - 3 buttons
-- [ ] Leaving ewaste prevent item loss - "are you sure?" 
+- [x] Make location buttons static / icons - 3 buttons
+- [-] Leaving ewaste prevent item loss - "are you sure?" 
 - [ ] Improve visibility of book tabs
 - [ ] Prominent shift+click
 - [ ] make all images square to fix hitbox
-- [ ] block buying if inventory full
-- [ ] reduce days by 1
-- [ ] better border between recipes
+- [x] block buying if inventory full
+- [x] reduce days by 1
+- [x] better border between recipes
+- [x] disable loot button if no time
 
 # Maintain motivation by setting milestones and showing progress when you reach them!
 1. [x] Gettign a random assortment of loot from the ewaste bin
@@ -64,3 +65,9 @@ Submission day: Jan 19th 8AM
 - [x] cpu, gpu
 - [x] pc / laptop
 - [ ] 
+
+## Attribution
+### Icons
+https://www.flaticon.com/free-icon/home_25694?term=home&page=1&position=2&origin=tag&related_id=25694
+https://www.flaticon.com/free-icon/renovation_2825738?term=workshop&page=1&position=90&origin=search&related_id=2825738
+https://www.flaticon.com/free-icon/bin_484611?term=bin&page=1&position=4&origin=search&related_id=484611
