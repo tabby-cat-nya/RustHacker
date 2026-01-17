@@ -23,6 +23,9 @@
 - [x] credit/replace images - square images that fit in the item slot box
 - [x] Disk drives scavenge to disks of varying rarity worth $$$
 	- [x] scavenge rolls can produce nothing?
+- [x] balancing recipes
+- [ ] sound effects
+- [ ] mixed bag random?
 
 Submission day: Jan 19th 8AM
 

@@ -4,7 +4,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_on_h_slider_value_changed(0.5)
+	_on_h_slider_value_changed(0.3)
 	pass # Replace with function body.
 
 

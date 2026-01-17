@@ -143,6 +143,7 @@ alignment = 1
 
 [node name="Kane" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer" instance=ExtResource("9_ih6pn")]
 layout_mode = 2
+link = "https://kanealex.bandcamp.com/"
 item = SubResource("Resource_7lgdl")
 
 [node name="Label3" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
@@ -162,6 +163,7 @@ item = SubResource("Resource_qbfqv")
 
 [node name="Kane2" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
 layout_mode = 2
+link = "https://kanealex.bandcamp.com/"
 item = SubResource("Resource_x5q3x")
 
 [node name="Sarantis" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
