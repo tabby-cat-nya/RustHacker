@@ -62,7 +62,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 func _on_mouse_entered() -> void:
 	#print("im real?")
 	if item:
-		Tooltip.show_tip(item.item_name, extra_data)
+		Tooltip.show_tip(item, extra_data)
 		MouseTweaks.hovered_slot = self
 	pass # Replace with function body.
 

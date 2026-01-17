@@ -1,6 +1,6 @@
 extends PanelContainer
 
-@export var tooltip_label : Label
+@export var tooltip_label : RichTextLabel
 @export var exdata_box : VBoxContainer
 @export var exdata_label : Label
 
@@ -14,8 +14,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	global_position = get_global_mouse_position() + Vector2(12,-6)
 
-func show_tip(text : String, extra : String = ""):
-	tooltip_label.text = text
+func show_tip(item : ItemData, extra : String = ""):
+	tooltip_label.text = item.item_name + "\nSell Value: $"+str(floori(item.buy_value/float(2)))
+	if item.botnet_power > 0:
+		tooltip_label.text += "\n[color=orchid]Botnet Power: " + str(item.botnet_power) +"[/color]"
 	if extra != "":
 		exdata_box.show()
 		exdata_label.text = extra

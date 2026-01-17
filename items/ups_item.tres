@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://etplpx8i2jf1"]
+
+[ext_resource type="StyleBox" uid="uid://dcnrpkhjhp4tk" path="res://inv_system/item_panels/rare.tres" id="1_pugmu"]
+[ext_resource type="Texture2D" uid="uid://k5r6iukify6r" path="res://assets/item images/UPS.png" id="2_pugmu"]
+[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="3_d6fvv"]
+
+[resource]
+script = ExtResource("3_d6fvv")
+item_name = "Uninterruptible power supply"
+icon = ExtResource("2_pugmu")
+custom_panel_style = ExtResource("1_pugmu")
+bin_chance = 0
+buy_value = 400
+metadata/_custom_type_script = "uid://dccraom7a7e8d"

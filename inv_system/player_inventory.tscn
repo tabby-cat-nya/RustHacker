@@ -1,16 +1,65 @@
-[gd_scene load_steps=15 format=3 uid="uid://bkhg56q71vsjv"]
+[gd_scene load_steps=16 format=3 uid="uid://bkhg56q71vsjv"]
 
 [ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="2_hk4hx"]
-[ext_resource type="Script" uid="uid://dccraom7a7e8d" path="res://inv_system/item_data.gd" id="2_l456l"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="3_8qgtd"]
-[ext_resource type="Resource" uid="uid://be540abaa08ox" path="res://items/server.tres" id="3_77dmv"]
 [ext_resource type="Script" uid="uid://chxgum3v3d1o7" path="res://crafting/recipe book/recipie_book.gd" id="4_bdgfq"]
-[ext_resource type="Resource" uid="uid://b3uytlkfvj67f" path="res://items/gaming_computer.tres" id="4_txpda"]
 [ext_resource type="Script" uid="uid://drm5jfhadys7l" path="res://crafting/recipe book/scavengeBook.gd" id="5_bdgfq"]
-[ext_resource type="Resource" uid="uid://8vw85c1qrypm" path="res://items/computer.tres" id="5_klg10"]
-[ext_resource type="Resource" uid="uid://bvcquf4e43r6r" path="res://items/laptop.tres" id="6_xr7r7"]
-[ext_resource type="Resource" uid="uid://3afonee3dw7" path="res://items/nas_item.tres" id="7_g2557"]
+[ext_resource type="Texture2D" uid="uid://of71gurkt2v2" path="res://assets/glyphs/keyboard_shift.png" id="12_txpda"]
+[ext_resource type="Texture2D" uid="uid://b6pddnr3aascg" path="res://assets/glyphs/mouse_left.png" id="13_klg10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txpda"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_color = Color(1, 1, 0, 0.7490196)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klg10"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.46963727, 0.46963727, 0.46963727, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(1, 1, 0, 0.7490196)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xr7r7"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(1, 1, 0, 0.7490196)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2557"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_color = Color(1, 1, 0, 0.7490196)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icm48"]
 content_margin_left = 0.0
@@ -40,6 +89,9 @@ corner_detail = 5
 font_size = 24
 font_color = Color(1, 0.7490196, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_xr7r7"]
+font_size = 24
+
 [node name="PlayerInventory" type="Control" node_paths=PackedStringArray("inventory_panel", "button", "money_label")]
 z_index = 2
 layout_mode = 3
@@ -53,13 +105,6 @@ script = ExtResource("1_vk2kx")
 inventory_panel = NodePath("Inventory")
 button = NodePath("Button")
 money_label = NodePath("PanelContainer/Label")
-power_values = Dictionary[ExtResource("2_l456l"), int]({
-ExtResource("3_77dmv"): 10,
-ExtResource("4_txpda"): 4,
-ExtResource("5_klg10"): 2,
-ExtResource("6_xr7r7"): 3,
-ExtResource("7_g2557"): 2
-})
 
 [node name="Button" type="Button" parent="."]
 visible = false
@@ -208,27 +253,33 @@ offset_left = 1.0
 offset_top = 126.0
 offset_right = 237.0
 offset_bottom = 603.0
+theme_override_colors/font_selected_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_colors/font_unselected_color = Color(0.99637884, 0.99637896, 0.99637896, 1)
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_txpda")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_klg10")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_xr7r7")
+theme_override_styles/tab_focus = SubResource("StyleBoxFlat_g2557")
 current_tab = 0
 
-[node name="Recipie Book" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("vbox")]
+[node name="Recipe Book" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("vbox")]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_icm48")
 script = ExtResource("4_bdgfq")
 vbox = NodePath("MarginContainer/ScrollContainer/VBoxContainer")
 metadata/_tab_index = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Recipie Book"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Recipe Book"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Recipie Book/MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Recipe Book/MarginContainer"]
 layout_mode = 2
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Recipie Book/MarginContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Recipe Book/MarginContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -275,5 +326,39 @@ layout_mode = 2
 text = "Money: $0"
 label_settings = SubResource("LabelSettings_bdgfq")
 horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 575.0
+offset_right = 507.0
+offset_bottom = 617.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer2/HBoxContainer"]
+layout_mode = 2
+text = "Quick Move:"
+label_settings = SubResource("LabelSettings_xr7r7")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_txpda")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="PanelContainer2/HBoxContainer"]
+layout_mode = 2
+text = "+"
+label_settings = SubResource("LabelSettings_xr7r7")
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer2/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("13_klg10")
+expand_mode = 3
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

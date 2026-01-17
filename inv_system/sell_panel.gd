@@ -7,6 +7,7 @@ extends Inventory
 func _ready() -> void:
 	super()
 	calculate_sell_value()
+	Clock.new_day.connect(calculate_sell_value)
 	pass # Replace with function body.
 
 

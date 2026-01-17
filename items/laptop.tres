@@ -11,4 +11,5 @@ icon = ExtResource("2_xyf87")
 custom_panel_style = ExtResource("1_xyf87")
 bin_chance = 0
 buy_value = 850
+botnet_power = 3
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

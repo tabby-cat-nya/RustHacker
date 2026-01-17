@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://dossu7drwmunk"]
+
+[ext_resource type="Texture2D" uid="uid://6es1rrxgg6xs" path="res://assets/icons/volume-up.png" id="1_8ia4e"]
+[ext_resource type="Script" uid="uid://bjieium3xew23" path="res://music/music_panel.gd" id="1_52dcn"]
+[ext_resource type="AudioStream" uid="uid://r5u2un1fds6m" path="res://music/Godot Wild Jam 89 Demo.ogg" id="3_yx23q"]
+
+[node name="MusicPanel" type="Control" node_paths=PackedStringArray("ambient_player")]
+z_index = 4
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_52dcn")
+ambient_player = NodePath("AudioStreamPlayer")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_8ia4e")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Soundtrack"
+
+[node name="HSlider" type="HSlider" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.0
+value = 0.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_yx23q")
+autoplay = true
+bus = &"Soundtrack"
+
+[connection signal="value_changed" from="PanelContainer/HBoxContainer/VBoxContainer/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://4c4k3o0jnmdk" path="res://scenes/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://b1rs6epjar6mj" path="res://assets/menu.png" id="2_con2f"]
 
-[node name="Ending" type="Control"]
+[node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_constants/margin_left = 250
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 250

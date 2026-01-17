@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbxymsdyvbe2p"]
+[gd_scene load_steps=6 format=3 uid="uid://dbxymsdyvbe2p"]
 
 [ext_resource type="Texture2D" uid="uid://dhyryjblax7sj" path="res://assets/workshop.png" id="1_d7fqo"]
 [ext_resource type="Script" uid="uid://bla0gy2tlqwe1" path="res://scenes/workshop.gd" id="1_g1tdj"]
 [ext_resource type="PackedScene" uid="uid://f06ym5ujhdsc" path="res://inv_system/crafting_panel.tscn" id="2_wwo6w"]
+[ext_resource type="Script" uid="uid://dm7x3etlucffq" path="res://inv_system/trash_slot.gd" id="4_0t7iv"]
+[ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="4_4103c"]
 
 [node name="Workshop" type="Control" node_paths=PackedStringArray("ewaste_button", "computer_button", "crafting_inv")]
 layout_mode = 3
@@ -60,5 +62,42 @@ offset_top = 189.0
 offset_right = 1039.0
 offset_bottom = 444.0
 
+[node name="TrashSlot" type="PanelContainer" parent="." node_paths=PackedStringArray("slot")]
+modulate = Color(1, 0.31965953, 0.2533799, 1)
+layout_mode = 0
+offset_left = 893.0
+offset_top = 486.0
+offset_right = 1026.0
+offset_bottom = 573.0
+script = ExtResource("4_0t7iv")
+slot = NodePath("MarginContainer/VBoxContainer/HBoxContainer/ItemSlot")
+
+[node name="MarginContainer" type="MarginContainer" parent="TrashSlot"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TrashSlot/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TrashSlot/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Trash Slot"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TrashSlot/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemSlot" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_4103c")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Destroy"
+
 [connection signal="pressed" from="GotoEwaste" to="." method="_on_goto_ewaste_pressed"]
 [connection signal="pressed" from="GotoComputer" to="." method="_on_goto_computer_pressed"]
+[connection signal="pressed" from="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer/Button" to="TrashSlot" method="_on_button_pressed"]

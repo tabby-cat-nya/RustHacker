@@ -19,8 +19,18 @@ func scavs_ready():
 		new_slot.item = scav.input
 		new_slot.block_taking = true
 		var scav_preview : String = str(scav.rolls) + " Rolls"
+		
+		var total_chance : int = 0
 		for loot in scav.loot_pool:
-			scav_preview += "\n" + loot.item.item_name + " : " + str(loot.chance) + " Chance"
+			total_chance += loot.chance
+		var uncounted_chance = total_chance
+		
+		for loot in scav.loot_pool:
+			if loot.item:
+				scav_preview += "\n" + loot.item.item_name + ": " + str((int((loot.chance/float(total_chance))*10000))/100) + "%"
+				uncounted_chance -= loot.chance
+		if uncounted_chance > 0:
+			scav_preview += "\nNothing: " + str((int((uncounted_chance/float(total_chance))*10000))/100) + "%"
 		new_slot.extra_data = scav_preview
 		grid.add_child(new_slot)
 		pass

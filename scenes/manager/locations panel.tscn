@@ -68,7 +68,7 @@ theme_override_styles/panel = ExtResource("5_qjxm7")
 
 [node name="Label" type="Label" parent="Move blocker"]
 layout_mode = 2
-text = "Cannot move"
+text = "Cannot travel"
 horizontal_alignment = 1
 autowrap_mode = 2
 

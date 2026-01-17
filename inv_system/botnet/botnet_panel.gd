@@ -26,9 +26,9 @@ func _notification(what: int) -> void:
 
 func check_server():
 	if slots[0].item:
-		if PlayerInventory.power_values.has(slots[0].item):
+		if slots[0].item.botnet_power > 0:
 			install_button.disabled = false
-			power_predict.text = "[color=green][wave]Device Power: " + str(PlayerInventory.power_values.get(slots[0].item)) 
+			power_predict.text = "[color=green][wave]Device Power: " + str(slots[0].item.botnet_power) 
 		else:
 			install_button.disabled = true
 			power_predict.text = "[pulse]Insert a device to predict power"
@@ -39,7 +39,7 @@ func check_server():
 
 
 func _on_button_pressed() -> void:
-	PlayerInventory.botnet_servers += PlayerInventory.power_values.get(slots[0].item)
+	PlayerInventory.botnet_servers += slots[0].item.botnet_power
 	PlayerInventory.botnet.append(slots[0].item)
 	install_button.disabled = true
 	power_predict.text = "[pulse]Insert a device to predict power"

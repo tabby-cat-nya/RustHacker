@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bicj8f61mhigk"]
+
+[ext_resource type="StyleBox" uid="uid://hgjmkwj0dbqr" path="res://inv_system/item_panels/default.tres" id="1_lpte7"]
+[ext_resource type="Script" uid="uid://kvxou0qjrhmc" path="res://credits/credit_slot.gd" id="2_katch"]
+[ext_resource type="Texture2D" uid="uid://b7jp850fqpa0j" path="res://icon.svg" id="3_0u6ut"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ab1u2"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CreditSlot" type="Panel" node_paths=PackedStringArray("icon", "label")]
+custom_minimum_size = Vector2(50, 50)
+theme_override_styles/panel = ExtResource("1_lpte7")
+script = ExtResource("2_katch")
+icon = NodePath("Icon")
+label = NodePath("Icon/Label")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_0u6ut")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="Icon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -14.599998
+offset_right = 30.999998
+offset_bottom = 8.400002
+grow_horizontal = 2
+grow_vertical = 0
+text = "meow"
+label_settings = SubResource("LabelSettings_ab1u2")
+horizontal_alignment = 2
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

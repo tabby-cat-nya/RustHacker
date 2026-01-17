@@ -12,7 +12,7 @@
 - [x] shift click items to move to other inventory?
 - [x] automatically fill recipie book
 - [x] block taking from recipe book item slots
-- [ ] trash slot
+- [x] trash slot
 - [ ] endings
 	- [ ] 0 power	mrowww
 	- [ ]  1-19		mew
@@ -20,26 +20,29 @@
 	- [ ] 40-59		winning more
 	- [ ] 60+		winning most
 - [ ] soundtrack - kane working on something
-- [ ] credit/replace images - square images that fit in the item slot box
-- [ ] Disk drives scavenge to disks of varying rarity worth $$$
+- [x] credit/replace images - square images that fit in the item slot box
+- [x] Disk drives scavenge to disks of varying rarity worth $$$
+	- [x] scavenge rolls can produce nothing?
 
 Submission day: Jan 19th 8AM
 
 ## Bugs / Fixes
 - [x] Add Sarantis to playtesters list
-- [ ] Volume slider for music
+- [x] Volume slider for music
 - [x] Change GPU rarity border to epic
-- [ ] Refresh sell (and botnet) button when changes to next day
-- [ ] Improve tooltips - sell value, botnet value, scavengable?, flavour text
+- [x] Refresh sell (and botnet) button when changes to next day
+- [x] Improve tooltips - sell value, botnet value, scavengable?, flavour text
 - [x] Make location buttons static / icons - 3 buttons
 - [-] Leaving ewaste prevent item loss - "are you sure?" 
-- [ ] Improve visibility of book tabs
-- [ ] Prominent shift+click
-- [ ] make all images square to fix hitbox
+- [x] Improve visibility of book tabs
+- [x] Prominent shift+click
+- [x] make all images square to fix hitbox
 - [x] block buying if inventory full
 - [x] reduce days by 1
 - [x] better border between recipes
 - [x] disable loot button if no time
+- [x] show percentage chances for scavenging
+- [x] trash slto
 
 # Maintain motivation by setting milestones and showing progress when you reach them!
 1. [x] Gettign a random assortment of loot from the ewaste bin
@@ -68,6 +71,9 @@ Submission day: Jan 19th 8AM
 
 ## Attribution
 ### Icons
-https://www.flaticon.com/free-icon/home_25694?term=home&page=1&position=2&origin=tag&related_id=25694
-https://www.flaticon.com/free-icon/renovation_2825738?term=workshop&page=1&position=90&origin=search&related_id=2825738
-https://www.flaticon.com/free-icon/bin_484611?term=bin&page=1&position=4&origin=search&related_id=484611
+https://www.flaticon.com/free-icon/home_25694
+https://www.flaticon.com/free-icon/renovation_2825738
+https://www.flaticon.com/free-icon/bin_484611
+https://www.flaticon.com/free-icon/volume-up_6996058
+
+Glyphs - https://kenney.nl/assets/input-prompts

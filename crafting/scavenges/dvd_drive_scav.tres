@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ScavengeRecipe" load_steps=7 format=3 uid="uid://bagxi34ry0g1b"]
+
+[ext_resource type="Resource" uid="uid://d14wjbxictxb" path="res://items/dvd_drive.tres" id="1_54aqd"]
+[ext_resource type="Script" uid="uid://oa5rlx6ttwuj" path="res://crafting/rollableLoot.gd" id="2_8d3so"]
+[ext_resource type="Resource" uid="uid://cbgv58ylt2wnc" path="res://items/disc_item.tres" id="3_54aqd"]
+[ext_resource type="Script" uid="uid://boqr1fowaqmt0" path="res://crafting/scavenge_recipe.gd" id="5_n3vaw"]
+
+[sub_resource type="Resource" id="Resource_uytxf"]
+script = ExtResource("2_8d3so")
+item = ExtResource("3_54aqd")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[sub_resource type="Resource" id="Resource_8d3so"]
+script = ExtResource("2_8d3so")
+chance = 9
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
+[resource]
+script = ExtResource("5_n3vaw")
+input = ExtResource("1_54aqd")
+rolls = 1
+loot_pool = Array[ExtResource("2_8d3so")]([SubResource("Resource_uytxf"), SubResource("Resource_8d3so")])
+metadata/_custom_type_script = "uid://boqr1fowaqmt0"

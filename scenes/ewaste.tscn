@@ -35,7 +35,7 @@ layout_mode = 0
 offset_left = 751.0
 offset_top = 376.0
 offset_right = 1027.0
-offset_bottom = 576.0
+offset_bottom = 630.0
 script = ExtResource("1_6uqi0")
 inventory_name = "E-waste Recycling Bin"
 type = "Loot"
@@ -97,7 +97,7 @@ layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="BinPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 14
+theme_override_constants/separation = 69
 
 [node name="Delete" type="Button" parent="BinPanel/MarginContainer/VBoxContainer"]
 modulate = Color(1, 0, 0, 1)

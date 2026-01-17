@@ -8,6 +8,8 @@ var starting_time : int = 200
 @export var days_text : Label
 @export var next_button : Button
 
+signal new_day
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -35,6 +37,7 @@ func _on_next_day_pressed() -> void:
 	if days_left >= 1:
 		days_left -= 1
 		time_left = 200
+		new_day.emit()
 	else:
 		get_tree().change_scene_to_file("res://scenes/ending.tscn")
 		PlayerInventory.hide()

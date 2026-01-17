@@ -23,6 +23,7 @@ Clock="*res://time_system/clock.tscn"
 MouseTweaks="*res://mouseTweaks.gd"
 RecipeManager="*res://crafting/recipeManager.gd"
 Locations="*res://scenes/manager/locations panel.tscn"
+MusicPanel="*res://music/music_panel.tscn"
 
 [display]
 
