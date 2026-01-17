@@ -35,7 +35,7 @@ func _on_reset_button_pressed() -> void:
 	PlayerInventory.money = 0
 	PlayerInventory.botnet_servers = 0
 	PlayerInventory.inventory_panel.empty_grid()
-	Clock.days_left = 7
+	Clock.days_left = 6
 	Clock.time_left = 200
 	PlayerInventory.botnet.clear()
 	PlayerInventory.show()

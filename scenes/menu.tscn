@@ -81,7 +81,8 @@ text = "Play!"
 layout_mode = 2
 bbcode_enabled = true
 text = "[i]Credits
-[ul] Playtesting: Maxie, Kane
+[ul]Soundtrack by Kane
+Playtesting: Maxie, Kane, Sarantis
 Octodemy's Inventory Tutorial
 Item Icons: (todo)"
 fit_content = true

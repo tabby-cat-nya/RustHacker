@@ -1,6 +1,6 @@
 extends Control
 
-@export var days_left : int = 7
+@export var days_left : int = 6
 @export var time_left : int = 200
 var starting_time : int = 200
 @export var bar : TextureProgressBar
