@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Repurposed Jam"
+config/name="Rust Hacker"
 run/main_scene="uid://dxr1ergmn3ij7"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://csov3hvc14ki4"
@@ -49,3 +49,4 @@ quick_move={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
