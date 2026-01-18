@@ -48,6 +48,9 @@ Submission day: Jan 19th 8AM
 - [x] trash slto
 - [x] onyl display sell value if > 0
 - [x] link menu to credits screen
+- [x] filling power bar animation
+- [x] increase server cash/botnet value
+- [ ] scavenge power supply to power cells?
 
 # Maintain motivation by setting milestones and showing progress when you reach them!
 1. [x] Gettign a random assortment of loot from the ewaste bin
@@ -94,3 +97,14 @@ some sort of acronym - RUST, REDDIT, UTS, CAT, CATGIRL
 - Reclaim U System Takeover
 
 https://cooltext.com/Edit-Logo?LogoID=5002855292&5002855292_Gradient2=Frost%20Black%2001
+
+Hacking targets: Flight logs? bank? google, goverment
+- US Goverment
+- science lab
+- evil websites - google/amazon
+- UTS 
+- Telstra/Optus
+- Reddit, google
+
+### Hacking Levels
+None/Fail -> UTS -> Reddit -> Google -> US Goverment

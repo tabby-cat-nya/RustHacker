@@ -97,7 +97,7 @@ func style_scavenge():
 	action_button.add_theme_stylebox_override("normal",scavenge_style)
 	action_button.add_theme_stylebox_override("hover",scavenge_style_hover)
 	action_button.add_theme_stylebox_override("pressed",scavenge_style_pressed)
-	action_button.text = "Scavenge!"
+	action_button.text = "Salvage!"
 	action_button.disabled = false
 	
 func style_none():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cix7xfnu1305i"]
+[gd_scene load_steps=24 format=3 uid="uid://cix7xfnu1305i"]
 
 [ext_resource type="Script" uid="uid://4c4k3o0jnmdk" path="res://scenes/menu.gd" id="1_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://b1rs6epjar6mj" path="res://assets/menu.png" id="2_0ctdu"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://bu3t30sqi3t8t" path="res://credits/people/spantle.webp" id="9_c6kru"]
 [ext_resource type="PackedScene" uid="uid://bicj8f61mhigk" path="res://credits/credit_slot.tscn" id="9_ih6pn"]
 [ext_resource type="Texture2D" uid="uid://cmdro72icyith" path="res://credits/people/jessica.webp" id="10_7lgdl"]
+[ext_resource type="Texture2D" uid="uid://cgonrrh044pu2" path="res://credits/people/peterfly.webp" id="11_c6kru"]
+[ext_resource type="Texture2D" uid="uid://dyft7abnyeqmi" path="res://credits/people/mesmaa.webp" id="12_qbfqv"]
+[ext_resource type="Texture2D" uid="uid://g6xq0gt8dq27" path="res://credits/people/skmojo.webp" id="13_x5q3x"]
+[ext_resource type="Texture2D" uid="uid://cw6ijdxvlrjq2" path="res://credits/people/cookiencream.webp" id="14_nmdnh"]
 
 [sub_resource type="Resource" id="Resource_7lgdl"]
 script = ExtResource("6_7lgdl")
@@ -47,6 +51,38 @@ metadata/_custom_type_script = "uid://dccraom7a7e8d"
 script = ExtResource("6_7lgdl")
 item_name = "Jessica"
 icon = ExtResource("10_7lgdl")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_83ncp"]
+script = ExtResource("6_7lgdl")
+item_name = "Peterfly"
+icon = ExtResource("11_c6kru")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_sxold"]
+script = ExtResource("6_7lgdl")
+item_name = "Mesmaa"
+icon = ExtResource("12_qbfqv")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_olp7g"]
+script = ExtResource("6_7lgdl")
+item_name = "Skmojo"
+icon = ExtResource("13_x5q3x")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_agqj7"]
+script = ExtResource("6_7lgdl")
+item_name = "Cookie"
+icon = ExtResource("14_nmdnh")
 custom_panel_style = ExtResource("7_ih6pn")
 buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
@@ -174,10 +210,28 @@ item = SubResource("Resource_nmdnh")
 layout_mode = 2
 item = SubResource("Resource_c6kru")
 
+[node name="Peterfly" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_83ncp")
+
+[node name="Mesmaa" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_sxold")
+
+[node name="skmojo" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_olp7g")
+
+[node name="cookiencream" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_agqj7")
+
 [node name="other" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 bbcode_enabled = true
-text = "[center]Icons[/center][ul]
+text = "[url=https://www.youtube.com/watch?v=JUR1qQ79eJY]Youtube Tutorial: Making a GOOD Drag and Drop Inventory by Octodemy[/url]
+
+[center]Icons[/center][ul]
 [url=https://www.flaticon.com/free-icon/bin_484611]Bin Icon by Freepik[/url]
 [url=https://www.flaticon.com/free-icon/renovation_2825738]Rennovation Icon by Freepik[/url]
 [url=https://www.flaticon.com/free-icon/home_25694]Home Icon by Dave Gandy[/url]

@@ -1,14 +1,56 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpa3yvdrddtsh"]
+[gd_scene load_steps=15 format=3 uid="uid://dpa3yvdrddtsh"]
 
 [ext_resource type="Texture2D" uid="uid://cvsibrbtuqfww" path="res://assets/ready_time.png" id="1_chnjs"]
 [ext_resource type="Script" uid="uid://c4y7w10si2q2p" path="res://time_system/clock.gd" id="1_m6rn1"]
+[ext_resource type="Script" uid="uid://md6s5hsjvnxc" path="res://time_system/hack_level.gd" id="2_hjq5n"]
 [ext_resource type="Texture2D" uid="uid://bemb2moou1hkj" path="res://assets/timer_over.png" id="2_m6rn1"]
 [ext_resource type="Texture2D" uid="uid://dvxtm2ahjd55h" path="res://assets/used_time.png" id="3_uyb5s"]
+[ext_resource type="Texture2D" uid="uid://h5b7viae7oxt" path="res://assets/power bar under.png" id="5_idmoy"]
+[ext_resource type="Texture2D" uid="uid://dyd73wec7wfyh" path="res://assets/power bar over.png" id="6_hjq5n"]
+[ext_resource type="Texture2D" uid="uid://1bn501rcmtlf" path="res://assets/power bar progress.png" id="7_m763i"]
+
+[sub_resource type="Resource" id="Resource_hjq5n"]
+script = ExtResource("2_hjq5n")
+name = "None"
+ending_text = "Despite your best efforts, your botnet isn't powerful enough to hack anything this time. You'll have to give it another shot once the security is less suspicious of you"
+metadata/_custom_type_script = "uid://md6s5hsjvnxc"
+
+[sub_resource type="Resource" id="Resource_m763i"]
+script = ExtResource("2_hjq5n")
+name = "UTS"
+power = 10
+color = Color(0.36701235, 0.9999997, 0.3376366, 1)
+ending_text = "You hack into the UTS administration servers and completely cancel the OSI saving thousands of classes, hundres of staff jobs and many key degrees!"
+metadata/_custom_type_script = "uid://md6s5hsjvnxc"
+
+[sub_resource type="Resource" id="Resource_nhhwl"]
+script = ExtResource("2_hjq5n")
+name = "Microsoft"
+power = 20
+color = Color(0.36862746, 1, 1, 1)
+ending_text = "Your sizable botnet quickly cuts through the defenses of the Microsoft servers eliminating Copilot and stealing their source code so you can run any Windows program on linux "
+metadata/_custom_type_script = "uid://md6s5hsjvnxc"
+
+[sub_resource type="Resource" id="Resource_023ps"]
+script = ExtResource("2_hjq5n")
+name = "X"
+power = 40
+color = Color(0.70184636, 0.4491853, 1, 1)
+ending_text = "You point your powerful botnet towards X (the everthing app) and eviscerate the platform along with grok and elon musk, reducing them both to ashes"
+metadata/_custom_type_script = "uid://md6s5hsjvnxc"
+
+[sub_resource type="Resource" id="Resource_cb2q0"]
+script = ExtResource("2_hjq5n")
+name = "US Goverment"
+power = 65
+color = Color(0.96814066, 0.8503548, 0, 1)
+ending_text = "With your mighty botnet you break into the US goverment servers and release every secret file aswell as reverse every transphobic, homophobic or otherwise bad law. Finally you turn all the White House automated defenses against Trump"
+metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 
 [sub_resource type="LabelSettings" id="LabelSettings_r3ygl"]
 font_size = 32
 
-[node name="Clock" type="Control" node_paths=PackedStringArray("bar", "timer_text", "days_text", "next_button")]
+[node name="Clock" type="Control" node_paths=PackedStringArray("bar", "timer_text", "days_text", "next_button", "current_target_label", "power_bar", "next_target_label")]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -18,10 +60,14 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_m6rn1")
-bar = NodePath("PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar")
-timer_text = NodePath("PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar/PanelContainer/Label")
-days_text = NodePath("PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer/Label")
-next_button = NodePath("PanelContainer/VBoxContainer/NextDay")
+bar = NodePath("PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureProgressBar")
+timer_text = NodePath("PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureProgressBar/PanelContainer/Label")
+days_text = NodePath("PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer/Label")
+next_button = NodePath("PanelContainer/HBoxContainer/VBoxContainer/NextDay")
+current_target_label = NodePath("PanelContainer/HBoxContainer/Hacking/Current Target")
+power_bar = NodePath("PanelContainer/HBoxContainer/Hacking/Power Bar")
+next_target_label = NodePath("PanelContainer/HBoxContainer/Hacking/Next Target")
+levels = Array[ExtResource("2_hjq5n")]([SubResource("Resource_hjq5n"), SubResource("Resource_m763i"), SubResource("Resource_nhhwl"), SubResource("Resource_023ps"), SubResource("Resource_cb2q0")])
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -33,27 +79,30 @@ offset_right = 20.0
 offset_bottom = 40.0
 grow_horizontal = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "7"
 label_settings = SubResource("LabelSettings_r3ygl")
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Days Left"
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(150, 73)
 layout_mode = 2
 max_value = 1.0
@@ -67,7 +116,7 @@ texture_under = ExtResource("1_chnjs")
 texture_over = ExtResource("2_m6rn1")
 texture_progress = ExtResource("3_uyb5s")
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar"]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureProgressBar"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -80,15 +129,46 @@ offset_right = 16.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer/TextureProgressBar/PanelContainer"]
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer/HBoxContainer/TextureProgressBar/PanelContainer"]
 layout_mode = 2
 size_flags_vertical = 8
 text = "200"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="NextDay" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="NextDay" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "Proceed to next day ->"
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/NextDay" to="." method="_on_next_day_pressed"]
+[node name="Hacking" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/Hacking"]
+layout_mode = 2
+text = "Current Hacking Target:"
+horizontal_alignment = 1
+
+[node name="Current Target" type="Label" parent="PanelContainer/HBoxContainer/Hacking"]
+layout_mode = 2
+text = "Bank"
+horizontal_alignment = 1
+
+[node name="Power Bar" type="TextureProgressBar" parent="PanelContainer/HBoxContainer/Hacking"]
+self_modulate = Color(0.36701235, 0.9999997, 0.3376366, 1)
+layout_mode = 2
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.0
+texture_under = ExtResource("5_idmoy")
+texture_over = ExtResource("6_hjq5n")
+texture_progress = ExtResource("7_m763i")
+
+[node name="Next Target" type="Label" parent="PanelContainer/HBoxContainer/Hacking"]
+layout_mode = 2
+text = "10 Power to next target"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/NextDay" to="." method="_on_next_day_pressed"]

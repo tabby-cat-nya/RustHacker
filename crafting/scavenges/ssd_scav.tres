@@ -9,13 +9,13 @@
 [sub_resource type="Resource" id="Resource_aq2uy"]
 script = ExtResource("2_hitgd")
 item = ExtResource("3_rrf34")
-chance = 1
+chance = 4
 metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
 
 [sub_resource type="Resource" id="Resource_7lonm"]
 script = ExtResource("2_hitgd")
 item = ExtResource("5_4ss58")
-chance = 1
+chance = 6
 metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
 
 [resource]

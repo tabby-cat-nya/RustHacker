@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkhg56q71vsjv"]
+[gd_scene load_steps=17 format=3 uid="uid://bkhg56q71vsjv"]
 
 [ext_resource type="Script" uid="uid://jxkjnscuxcyi" path="res://inv_system/player_inventory.gd" id="1_vk2kx"]
 [ext_resource type="Script" uid="uid://c6oycdae5wvjf" path="res://inv_system/inventory.gd" id="2_hk4hx"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="3_8qgtd"]
 [ext_resource type="Script" uid="uid://chxgum3v3d1o7" path="res://crafting/recipe book/recipie_book.gd" id="4_bdgfq"]
 [ext_resource type="Script" uid="uid://drm5jfhadys7l" path="res://crafting/recipe book/scavengeBook.gd" id="5_bdgfq"]
+[ext_resource type="Texture2D" uid="uid://v01a44neaam6" path="res://assets/bubble.png" id="8_icm48"]
 [ext_resource type="Texture2D" uid="uid://of71gurkt2v2" path="res://assets/glyphs/keyboard_shift.png" id="12_txpda"]
 [ext_resource type="Texture2D" uid="uid://b6pddnr3aascg" path="res://assets/glyphs/mouse_left.png" id="13_klg10"]
 
@@ -92,7 +93,7 @@ font_color = Color(1, 0.7490196, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_xr7r7"]
 font_size = 24
 
-[node name="PlayerInventory" type="Control" node_paths=PackedStringArray("inventory_panel", "button", "money_label")]
+[node name="PlayerInventory" type="Control" node_paths=PackedStringArray("inventory_panel", "button", "money_label", "reminder_bubble")]
 z_index = 2
 layout_mode = 3
 anchors_preset = 15
@@ -105,6 +106,7 @@ script = ExtResource("1_vk2kx")
 inventory_panel = NodePath("Inventory")
 button = NodePath("Button")
 money_label = NodePath("PanelContainer/Label")
+reminder_bubble = NodePath("ReminderBuble")
 
 [node name="Button" type="Button" parent="."]
 visible = false
@@ -285,7 +287,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 10
 
-[node name="Scavenge" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("grid")]
+[node name="Salvage" type="PanelContainer" parent="TabContainer" node_paths=PackedStringArray("grid")]
 visible = false
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8qgtd")
@@ -293,23 +295,23 @@ script = ExtResource("5_bdgfq")
 grid = NodePath("MarginContainer/VBoxContainer/GridContainer")
 metadata/_tab_index = 1
 
-[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Scavenge"]
+[node name="MarginContainer" type="MarginContainer" parent="TabContainer/Salvage"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Scavenge/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Salvage/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="TabContainer/Scavenge/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TabContainer/Salvage/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "These items can be scavenged into other resources"
+text = "Hover over an item to see what you can get from salvaging it"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="TabContainer/Scavenge/MarginContainer/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="TabContainer/Salvage/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 columns = 4
@@ -361,4 +363,24 @@ layout_mode = 2
 texture = ExtResource("13_klg10")
 expand_mode = 3
 
+[node name="ReminderBuble" type="TextureRect" parent="."]
+self_modulate = Color(1, 0, 0.23137255, 0.6039216)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 31.0
+offset_right = 238.0
+offset_bottom = 121.0
+texture = ExtResource("8_icm48")
+
+[node name="Label" type="Label" parent="ReminderBuble"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 230.0
+offset_bottom = 60.0
+text = "View your salvaging recipes here"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="tab_selected" from="TabContainer" to="." method="_on_tab_container_tab_selected"]

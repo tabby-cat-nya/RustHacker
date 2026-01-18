@@ -16,7 +16,9 @@ func _process(delta: float) -> void:
 
 func show_tip(item : ItemData, extra : String = ""):
 	tooltip_label.text = item.item_name
-	if item.buy_value > 0:
+	if item.buy_value > 200:
+		tooltip_label.text += "\n[color=gold]Sell Value: $"+str(floori(item.buy_value/float(2))) + "[/color]"
+	elif item.buy_value > 0:
 		tooltip_label.text += "\nSell Value: $"+str(floori(item.buy_value/float(2)))
 	if item.botnet_power > 0:
 		tooltip_label.text += "\n[color=orchid]Botnet Power: " + str(item.botnet_power) +"[/color]"

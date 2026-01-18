@@ -7,12 +7,6 @@
 [ext_resource type="Resource" uid="uid://c2wbqelme8vy1" path="res://items/ram_item.tres" id="5_fut73"]
 [ext_resource type="Resource" uid="uid://bjmledqi51eut" path="res://items/ssd_item.tres" id="6_bmsvv"]
 
-[sub_resource type="Resource" id="Resource_wkxe4"]
-script = ExtResource("2_n1ajs")
-item = ExtResource("3_t0fjb")
-chance = 2
-metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
-
 [sub_resource type="Resource" id="Resource_7lonm"]
 script = ExtResource("2_n1ajs")
 item = ExtResource("5_fut73")
@@ -25,8 +19,14 @@ item = ExtResource("6_bmsvv")
 chance = 1
 metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
 
+[sub_resource type="Resource" id="Resource_wkxe4"]
+script = ExtResource("2_n1ajs")
+item = ExtResource("3_t0fjb")
+chance = 1
+metadata/_custom_type_script = "uid://oa5rlx6ttwuj"
+
 [resource]
 script = ExtResource("4_bmsvv")
 input = ExtResource("1_t0fjb")
-loot_pool = Array[ExtResource("2_n1ajs")]([SubResource("Resource_wkxe4"), SubResource("Resource_7lonm"), SubResource("Resource_3aoas")])
+loot_pool = Array[ExtResource("2_n1ajs")]([SubResource("Resource_7lonm"), SubResource("Resource_3aoas"), SubResource("Resource_wkxe4")])
 metadata/_custom_type_script = "uid://boqr1fowaqmt0"

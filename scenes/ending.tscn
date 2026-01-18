@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ekqrygb4eunr" path="res://scenes/ending.gd" id="1_2x1jc"]
 [ext_resource type="Texture2D" uid="uid://jdfmarm0iilr" path="res://assets/ending.png" id="1_mqjok"]
 
-[node name="Ending" type="Control" node_paths=PackedStringArray("server_box", "score_label")]
+[node name="Ending" type="Control" node_paths=PackedStringArray("server_box", "score_label", "ending_text")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +14,7 @@ mouse_filter = 2
 script = ExtResource("1_2x1jc")
 server_box = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/botnet display")
 score_label = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScoreL")
+ending_text = NodePath("MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ending_text")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -3
@@ -59,10 +60,11 @@ bbcode_enabled = true
 text = "[center][font_size=50][wave]meow!!"
 fit_content = true
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ending_text" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "You launch your botnet filling the internet with catgirls!"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="botnet display" type="HFlowContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -2,6 +2,7 @@ extends Control
 
 @export var server_box : HFlowContainer
 @export var score_label : Label
+@export var ending_text : Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -10,6 +11,7 @@ func _ready() -> void:
 	for slot in PlayerInventory.inventory_panel.slots:
 		if slot.item:
 			inv_sell_value += floori(slot.item.buy_value/float(2))
+	ending_text.text = Clock.ending_text
 	
 	#var server_item : ItemData = load("res://items/server.tres")
 	for device in PlayerInventory.botnet:
