@@ -18,7 +18,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [node name="Tooltip" type="PanelContainer" node_paths=PackedStringArray("tooltip_label", "exdata_box", "exdata_label")]
-z_index = 3
+z_index = 7
 offset_right = 95.0
 offset_bottom = 31.0
 size_flags_horizontal = 2

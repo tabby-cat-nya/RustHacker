@@ -24,7 +24,7 @@ func _notification(what: int) -> void:
 
 func calculate_sell_value():
 	if slots[0].item:
-		sell_label.text = str(floori(slots[0].item.buy_value / float(2)))
+		sell_label.text = "$" + str(floori(slots[0].item.buy_value / float(2)))
 		sell_button.disabled = false
 	else:
 		sell_label.text = "Place an item"

@@ -36,7 +36,7 @@ script = ExtResource("2_hjq5n")
 name = "X"
 power = 40
 color = Color(0.70184636, 0.4491853, 1, 1)
-ending_text = "You point your powerful botnet towards X (the everthing app) and eviscerate the platform along with grok and elon musk, reducing them both to ashes"
+ending_text = "You point your powerful botnet towards X (the everything app) and eviscerate the platform along with grok and elon musk, reducing them both to ashes"
 metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 
 [sub_resource type="Resource" id="Resource_cb2q0"]
