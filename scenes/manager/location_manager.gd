@@ -10,6 +10,11 @@ var current_location : Location
 @export var move_blocker_panel : PanelContainer
 @export var selection_indicator : Panel
 
+signal moved
+@export var ewaste_bubble : Label
+@export var workshop_bubble : Label
+@export var room_bubble : Label
+
 enum Location{
 	ewaste,
 	workshop,
@@ -18,6 +23,7 @@ enum Location{
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	hide()
 	current_location = Location.workshop
 	pass # Replace with function body.
@@ -25,7 +31,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	move_blocker_panel.visible = block_moving
+	#move_blocker_panel.visible = block_moving
 	
 	if current_location == Location.ewaste:
 		ewaste_button.self_modulate = selected_color
@@ -48,7 +54,8 @@ func goto_ewaste():
 	if current_location == Location.ewaste:
 		return
 	current_location = Location.ewaste
-	get_tree().change_scene_to_file("res://scenes/ewaste.tscn")
+	moved.emit()
+	#get_tree().change_scene_to_file("res://scenes/ewaste.tscn")
 
 func goto_workshop():
 	selection_indicator.reparent(workshop_button)
@@ -56,7 +63,8 @@ func goto_workshop():
 	#if current_location == Location.workshop:
 		#return
 	current_location = Location.workshop
-	get_tree().change_scene_to_file("res://scenes/workshop.tscn")
+	moved.emit()
+	#get_tree().change_scene_to_file("res://scenes/workshop.tscn")
 
 func goto_room():
 	selection_indicator.reparent(room_button)
@@ -64,4 +72,40 @@ func goto_room():
 	if current_location == Location.room:
 		return
 	current_location = Location.room
-	get_tree().change_scene_to_file("res://scenes/room.tscn")
+	moved.emit()
+	#get_tree().change_scene_to_file("res://scenes/room.tscn")
+
+var filled_loot : int = 0
+var filled_crafting : int = 0
+var filled_trash : int = 0
+var filled_sell : int = 0
+var filled_install : int = 0
+func reset_bubbles():
+	filled_loot = 0
+	filled_crafting = 0
+	filled_trash = 0
+	filled_sell = 0
+	filled_install = 0
+
+func update_bubbles(inventory : String, slots_filled : int):
+	match inventory:
+		"Loot":
+			filled_loot = slots_filled
+		"Crafting":
+			filled_crafting = slots_filled
+		"Trash":
+			filled_trash = slots_filled
+		"Sell":
+			filled_sell = slots_filled
+		"Install":
+			filled_install = slots_filled
+	
+	ewaste_bubble.text = str(filled_loot)
+	workshop_bubble.text = str(filled_crafting + filled_trash)
+	room_bubble.text = str(filled_sell + filled_install)
+	
+	ewaste_bubble.get_parent().visible = filled_loot > 0
+	workshop_bubble.get_parent().visible = filled_crafting + filled_trash > 0
+	room_bubble.get_parent().visible = filled_sell + filled_install > 0
+	
+	pass

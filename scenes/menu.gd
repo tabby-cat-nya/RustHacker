@@ -24,6 +24,7 @@ func _on_play_button_pressed() -> void:
 	Clock.show()
 	Locations.show()
 	Locations.goto_workshop()
+	get_tree().change_scene_to_file("res://scenes/everywhere.tscn")
 	#Locations.current_location = Locations.Location.workshop
 	#get_tree().change_scene_to_file("res://scenes/workshop.tscn")
 

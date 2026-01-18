@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5dh55o5mgima"]
+[gd_scene load_steps=9 format=3 uid="uid://b5dh55o5mgima"]
 
 [ext_resource type="Script" uid="uid://bxymsudka4nnb" path="res://scenes/manager/location_manager.gd" id="1_o5d0c"]
 [ext_resource type="Texture2D" uid="uid://m10v3leibbil" path="res://assets/icons/bin.png" id="2_qjxm7"]
@@ -18,6 +18,13 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ogtx"]
+bg_color = Color(0.86303645, 0, 0.34692708, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjxm7"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -35,7 +42,7 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[node name="LocationManager" type="Control" node_paths=PackedStringArray("ewaste_button", "workshop_button", "room_button", "move_blocker_panel", "selection_indicator")]
+[node name="LocationManager" type="Control" node_paths=PackedStringArray("ewaste_button", "workshop_button", "room_button", "move_blocker_panel", "selection_indicator", "ewaste_bubble", "workshop_bubble", "room_bubble")]
 z_index = 3
 layout_mode = 3
 anchors_preset = 15
@@ -52,6 +59,9 @@ workshop_button = NodePath("PanelContainer/VBoxContainer/MoveWorkshop")
 room_button = NodePath("PanelContainer/VBoxContainer/MoveHome")
 move_blocker_panel = NodePath("Move blocker")
 selection_indicator = NodePath("PanelContainer/VBoxContainer/MoveWorkshop/Selected")
+ewaste_bubble = NodePath("PanelContainer/VBoxContainer/MoveEwaste/Bubble/ewasteBubble")
+workshop_bubble = NodePath("PanelContainer/VBoxContainer/MoveWorkshop/Bubble2/workshopBubble")
+room_bubble = NodePath("PanelContainer/VBoxContainer/MoveHome/Bubble3/roomBubble")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 0
@@ -68,6 +78,33 @@ layout_mode = 2
 layout_mode = 2
 icon = ExtResource("2_qjxm7")
 
+[node name="Bubble" type="Panel" parent="PanelContainer/VBoxContainer/MoveEwaste"]
+z_index = 4
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ogtx")
+
+[node name="ewasteBubble" type="Label" parent="PanelContainer/VBoxContainer/MoveEwaste/Bubble"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MoveWorkshop" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("3_1ogtx")
@@ -82,9 +119,63 @@ grow_vertical = 2
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_qjxm7")
 
+[node name="Bubble2" type="Panel" parent="PanelContainer/VBoxContainer/MoveWorkshop"]
+z_index = 4
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ogtx")
+
+[node name="workshopBubble" type="Label" parent="PanelContainer/VBoxContainer/MoveWorkshop/Bubble2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="MoveHome" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 icon = ExtResource("4_5p1uq")
+
+[node name="Bubble3" type="Panel" parent="PanelContainer/VBoxContainer/MoveHome"]
+z_index = 4
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -13.0
+offset_right = 13.0
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ogtx")
+
+[node name="roomBubble" type="Label" parent="PanelContainer/VBoxContainer/MoveHome/Bubble3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Move blocker" type="PanelContainer" parent="."]
 visible = false

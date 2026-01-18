@@ -11,6 +11,7 @@ class_name Inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Locations.update_bubbles(type, filled_slots())
 	slots.assign(grid.get_children())
 	inv_label.text = inventory_name
 	for slot in slots:
@@ -36,6 +37,7 @@ func _notification(what: int) -> void:
 			if data_bk:
 				data_bk.icon.show()
 				data_bk = null
+		Locations.update_bubbles(type, filled_slots())
 
 #attempts to add the provided item to the inventory, returns true on success
 func add_item(item : ItemData) -> bool:
@@ -43,6 +45,7 @@ func add_item(item : ItemData) -> bool:
 		if slot.item == null:
 			slot.item = item
 			slot.update_ui()
+			Locations.update_bubbles(type, filled_slots())
 			return true # item placed successfully
 	return false # theres no space to add the item
 	

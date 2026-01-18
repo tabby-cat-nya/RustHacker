@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Inventory
 
 @export var slot : ItemSlot
 

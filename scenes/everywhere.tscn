@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5p6vsbegoe4y"]
+
+[ext_resource type="Script" uid="uid://beop315mc4qii" path="res://scenes/everywhere_controller.gd" id="1_mois3"]
+[ext_resource type="PackedScene" uid="uid://dsfal3m4siap2" path="res://scenes/ewaste.tscn" id="2_5hq0i"]
+[ext_resource type="PackedScene" uid="uid://dbxymsdyvbe2p" path="res://scenes/workshop.tscn" id="3_1kk7g"]
+[ext_resource type="PackedScene" uid="uid://cu2yyw3f2avub" path="res://scenes/room.tscn" id="4_j0itd"]
+
+[node name="Everywhere" type="Control" node_paths=PackedStringArray("node_ewaste", "node_workshop", "node_room")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_mois3")
+node_ewaste = NodePath("ewaste")
+node_workshop = NodePath("Workshop")
+node_room = NodePath("room")
+
+[node name="ewaste" parent="." instance=ExtResource("2_5hq0i")]
+layout_mode = 1
+
+[node name="Workshop" parent="." instance=ExtResource("3_1kk7g")]
+layout_mode = 1
+
+[node name="room" parent="." instance=ExtResource("4_j0itd")]
+layout_mode = 1
