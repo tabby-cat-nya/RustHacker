@@ -9,4 +9,5 @@ item_name = "CPU"
 icon = ExtResource("1_mh86d")
 buy_value = 80
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

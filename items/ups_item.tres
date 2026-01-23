@@ -11,4 +11,5 @@ icon = ExtResource("2_pugmu")
 custom_panel_style = ExtResource("1_pugmu")
 bin_chance = 0
 buy_value = 400
+rarity = "Rare"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

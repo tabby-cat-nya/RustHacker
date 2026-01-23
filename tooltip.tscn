@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://sb2wq874p37j"]
+[gd_scene load_steps=6 format=3 uid="uid://sb2wq874p37j"]
 
 [ext_resource type="Script" uid="uid://cbta38dhunndc" path="res://tooltip.gd" id="1_gwequ"]
 
@@ -17,7 +17,16 @@ corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[node name="Tooltip" type="PanelContainer" node_paths=PackedStringArray("tooltip_label", "exdata_box", "exdata_label")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwequ"]
+content_margin_right = 5.0
+
+[sub_resource type="FontVariation" id="FontVariation_gwequ"]
+variation_transform = Transform2D(1, 0.35, 0, 1, 0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_oxk8h"]
+font = SubResource("FontVariation_gwequ")
+
+[node name="Tooltip" type="PanelContainer" node_paths=PackedStringArray("tooltip_label", "exdata_box", "exdata_label", "rarity_label")]
 z_index = 7
 offset_right = 95.0
 offset_bottom = 31.0
@@ -29,6 +38,14 @@ script = ExtResource("1_gwequ")
 tooltip_label = NodePath("VBoxContainer/Label")
 exdata_box = NodePath("VBoxContainer/Extradata")
 exdata_label = NodePath("VBoxContainer/Extradata/Label")
+rarity_label = NodePath("VBoxContainer/rarity")
+rarity_colors = Dictionary[String, Color]({
+"Common": Color(1, 1, 1, 1),
+"Epic": Color(0.8087111, 0.40824994, 0.9999972, 1),
+"Legendary": Color(1, 0.7529412, 0, 1),
+"Rare": Color(0.38142374, 0.9132181, 0.9999998, 1),
+"Uncommon": Color(0.59956974, 1, 0.59689647, 1)
+})
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -52,3 +69,10 @@ layout_mode = 2
 [node name="Label" type="Label" parent="VBoxContainer/Extradata"]
 layout_mode = 2
 text = "Extra data does here"
+
+[node name="rarity" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gwequ")
+text = "fdsfdsf"
+label_settings = SubResource("LabelSettings_oxk8h")
+horizontal_alignment = 2

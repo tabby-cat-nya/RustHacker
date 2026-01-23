@@ -11,4 +11,5 @@ icon = ExtResource("1_k071h")
 custom_panel_style = ExtResource("1_8brb6")
 bin_chance = 7
 buy_value = 2
+rarity = "Broken"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

@@ -9,4 +9,5 @@ item_name = "Optical Drive"
 icon = ExtResource("1_kdwp1")
 buy_value = 35
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

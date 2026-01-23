@@ -10,3 +10,4 @@ class_name ItemData
 @export var botnet_power : int = 0
 @export var can_buy : bool = false
 @export var description : String = ""
+@export var rarity : String = ""

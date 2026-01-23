@@ -9,4 +9,5 @@ item_name = "Large Power Supply Unit"
 icon = ExtResource("1_rjw1c")
 buy_value = 80
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
