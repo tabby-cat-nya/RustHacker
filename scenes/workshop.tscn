@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://dm7x3etlucffq" path="res://inv_system/trash_slot.gd" id="4_0t7iv"]
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="4_4103c"]
 
-[node name="Workshop" type="Control" node_paths=PackedStringArray("ewaste_button", "computer_button", "crafting_inv")]
+[node name="Workshop" type="Control" node_paths=PackedStringArray("ewaste_button", "computer_button", "crafting_inv", "trash_inv")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +18,7 @@ script = ExtResource("1_g1tdj")
 ewaste_button = NodePath("GotoEwaste")
 computer_button = NodePath("GotoComputer")
 crafting_inv = NodePath("CraftingPanel")
+trash_inv = NodePath("TrashSlot")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -62,7 +63,7 @@ offset_top = 189.0
 offset_right = 1039.0
 offset_bottom = 444.0
 
-[node name="TrashSlot" type="PanelContainer" parent="." node_paths=PackedStringArray("slot")]
+[node name="TrashSlot" type="PanelContainer" parent="." node_paths=PackedStringArray("slots", "grid", "inv_label")]
 modulate = Color(1, 0.31965953, 0.2533799, 1)
 layout_mode = 0
 offset_left = 893.0
@@ -70,7 +71,11 @@ offset_top = 486.0
 offset_right = 1026.0
 offset_bottom = 573.0
 script = ExtResource("4_0t7iv")
-slot = NodePath("MarginContainer/VBoxContainer/HBoxContainer/ItemSlot")
+inventory_name = "Trash Slot"
+slots = [NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/ItemSlot")]
+type = "Trash"
+grid = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer")
+inv_label = NodePath("MarginContainer/VBoxContainer/Label")
 
 [node name="MarginContainer" type="MarginContainer" parent="TrashSlot"]
 layout_mode = 2
@@ -90,7 +95,10 @@ horizontal_alignment = 1
 [node name="HBoxContainer" type="HBoxContainer" parent="TrashSlot/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ItemSlot" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("4_4103c")]
+[node name="GridContainer" type="GridContainer" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ItemSlot" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("4_4103c")]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="TrashSlot/MarginContainer/VBoxContainer/HBoxContainer"]

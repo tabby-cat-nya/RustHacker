@@ -1,17 +1,10 @@
-extends PanelContainer
+extends Inventory
 
-@export var slot : ItemSlot
+#@export var slot : ItemSlot
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_button_pressed() -> void:
-	slot.item = null
-	slot.update_ui()
+	empty_grid()
+	#slot.item = null
+	#slot.update_ui()
