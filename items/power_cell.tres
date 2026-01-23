@@ -7,4 +7,5 @@
 script = ExtResource("2_4u113")
 item_name = "Power Cell"
 icon = ExtResource("1_lh7dq")
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

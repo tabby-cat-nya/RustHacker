@@ -1,19 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgqs20xf7l8c"]
+[gd_scene load_steps=7 format=3 uid="uid://dgqs20xf7l8c"]
 
 [ext_resource type="Script" uid="uid://cpd04flfh5nlc" path="res://inv_system/item_slot.gd" id="1_m11ft"]
 [ext_resource type="StyleBox" uid="uid://hgjmkwj0dbqr" path="res://inv_system/item_panels/default.tres" id="1_mkcpq"]
 [ext_resource type="Texture2D" uid="uid://b7jp850fqpa0j" path="res://icon.svg" id="3_0tnt0"]
+[ext_resource type="Texture2D" uid="uid://bbu7dofi4u038" path="res://assets/blankIcon.png" id="4_0tnt0"]
+[ext_resource type="Texture2D" uid="uid://dokuqh6jq4eti" path="res://assets/sellIcon.png" id="5_eh2fu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ab1u2"]
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon", "label")]
+[node name="ItemSlot" type="Panel" node_paths=PackedStringArray("icon", "label", "botnet_icon", "sell_icon")]
 custom_minimum_size = Vector2(50, 50)
 theme_override_styles/panel = ExtResource("1_mkcpq")
 script = ExtResource("1_m11ft")
 icon = NodePath("Icon")
 label = NodePath("Icon/Label")
+botnet_icon = NodePath("icons/botnet_power")
+sell_icon = NodePath("icons/sell_only")
 
 [node name="Icon" type="TextureRect" parent="."]
 layout_mode = 1
@@ -45,6 +49,32 @@ grow_vertical = 0
 text = "120 GB"
 label_settings = SubResource("LabelSettings_ab1u2")
 horizontal_alignment = 2
+
+[node name="icons" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -24.0
+offset_bottom = 10.0
+grow_horizontal = 0
+alignment = 2
+
+[node name="botnet_power" type="TextureRect" parent="icons"]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("4_0tnt0")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="sell_only" type="TextureRect" parent="icons"]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("5_eh2fu")
+expand_mode = 1
+stretch_mode = 4
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

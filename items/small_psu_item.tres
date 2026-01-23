@@ -9,4 +9,5 @@ item_name = "Small Power Supply Unit"
 icon = ExtResource("1_62foo")
 buy_value = 20
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

@@ -12,4 +12,5 @@ custom_panel_style = ExtResource("1_jiyv5")
 bin_chance = 3
 buy_value = 500
 can_buy = true
+rarity = "Epic"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

@@ -2,10 +2,13 @@ extends Control
 
 @export var bin_inventory : Inventory
 @export var loot_button : Button
+@export var loot_bubble : Control
 #@export var loot_pool : Array[ItemData]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	if Clock.time_left < 200 or Clock.days_left < 6:
+		loot_bubble.hide()
 	pass # Replace with function body.
 
 
@@ -16,6 +19,7 @@ func _process(delta: float) -> void:
 
 
 func _on_loot_button_pressed() -> void:
+	loot_bubble.hide()
 	if Clock.has_time(10):
 		if bin_inventory.add_item(pick_random_item()):
 			Clock.use_time(10)

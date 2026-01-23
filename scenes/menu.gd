@@ -34,3 +34,7 @@ func _on_credits_button_pressed() -> void:
 
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+
+func _on_other_meta_clicked(meta: Variant) -> void:
+	OS.shell_open(str(meta))

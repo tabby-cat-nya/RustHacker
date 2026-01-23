@@ -60,7 +60,7 @@ horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Install Device"
+text = "Install Device (cannot return)"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

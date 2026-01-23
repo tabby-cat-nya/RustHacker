@@ -10,4 +10,5 @@ icon = ExtResource("1_i7fpe")
 bin_chance = 2
 buy_value = 50
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

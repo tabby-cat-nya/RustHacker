@@ -8,4 +8,5 @@ script = ExtResource("2_31pxd")
 item_name = "Plastic Scrap"
 icon = ExtResource("1_2haha")
 can_buy = true
+rarity = "Common"
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
