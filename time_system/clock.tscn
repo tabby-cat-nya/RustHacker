@@ -18,7 +18,7 @@ metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 [sub_resource type="Resource" id="Resource_m763i"]
 script = ExtResource("2_hjq5n")
 name = "UTS"
-power = 50
+power = 40
 color = Color(0.36701235, 0.9999997, 0.3376366, 1)
 ending_text = "You hack into the UTS administration servers and completely cancel the OSI saving thousands of classes, hundres of staff jobs and many key degrees!"
 metadata/_custom_type_script = "uid://md6s5hsjvnxc"
@@ -26,7 +26,7 @@ metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 [sub_resource type="Resource" id="Resource_nhhwl"]
 script = ExtResource("2_hjq5n")
 name = "Microsoft"
-power = 125
+power = 90
 color = Color(0.36862746, 1, 1, 1)
 ending_text = "Your sizable botnet quickly cuts through the defenses of the Microsoft servers eliminating Copilot and stealing their source code so you can run any Windows program on linux "
 metadata/_custom_type_script = "uid://md6s5hsjvnxc"
@@ -34,7 +34,7 @@ metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 [sub_resource type="Resource" id="Resource_023ps"]
 script = ExtResource("2_hjq5n")
 name = "X"
-power = 200
+power = 150
 color = Color(0.70184636, 0.4491853, 1, 1)
 ending_text = "You point your powerful botnet towards X (the everything app) and eviscerate the platform along with grok and elon musk, reducing them both to ashes"
 metadata/_custom_type_script = "uid://md6s5hsjvnxc"
@@ -42,7 +42,7 @@ metadata/_custom_type_script = "uid://md6s5hsjvnxc"
 [sub_resource type="Resource" id="Resource_cb2q0"]
 script = ExtResource("2_hjq5n")
 name = "US Goverment"
-power = 300
+power = 220
 color = Color(0.96814066, 0.8503548, 0, 1)
 ending_text = "With your mighty botnet you break into the US goverment servers and release every secret file aswell as reverse every transphobic, homophobic or otherwise bad law. Finally you turn all the White House automated defenses against Trump"
 metadata/_custom_type_script = "uid://md6s5hsjvnxc"
