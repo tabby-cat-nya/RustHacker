@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgqs20xf7l8c" path="res://inv_system/item_slot.tscn" id="3_8qgtd"]
 [ext_resource type="Script" uid="uid://chxgum3v3d1o7" path="res://crafting/recipe book/recipie_book.gd" id="4_bdgfq"]
 [ext_resource type="Script" uid="uid://drm5jfhadys7l" path="res://crafting/recipe book/scavengeBook.gd" id="5_bdgfq"]
-[ext_resource type="Texture2D" uid="uid://v01a44neaam6" path="res://assets/bubble.png" id="8_icm48"]
+[ext_resource type="Texture2D" uid="uid://cuftm024jj0o2" path="res://assets/new bubble.png" id="8_icm48"]
 [ext_resource type="Texture2D" uid="uid://of71gurkt2v2" path="res://assets/glyphs/keyboard_shift.png" id="12_txpda"]
 [ext_resource type="Texture2D" uid="uid://b6pddnr3aascg" path="res://assets/glyphs/mouse_left.png" id="13_klg10"]
 
@@ -252,9 +252,9 @@ layout_mode = 2
 [node name="TabContainer" type="TabContainer" parent="."]
 layout_mode = 0
 offset_left = 1.0
-offset_top = 126.0
+offset_top = 2.0
 offset_right = 237.0
-offset_bottom = 603.0
+offset_bottom = 646.0
 theme_override_colors/font_selected_color = Color(0.9490196, 0.9490196, 0, 1)
 theme_override_colors/font_unselected_color = Color(0.99637884, 0.99637896, 0.99637896, 1)
 theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_txpda")
@@ -366,20 +366,21 @@ expand_mode = 3
 [node name="ReminderBuble" type="TextureRect" parent="."]
 self_modulate = Color(1, 0, 0.23137255, 0.6039216)
 layout_mode = 0
-offset_left = 2.0
-offset_top = 31.0
-offset_right = 238.0
-offset_bottom = 121.0
+offset_left = 207.0
+offset_right = 363.0
+offset_bottom = 112.0
 texture = ExtResource("8_icm48")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="ReminderBuble"]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 11.0
-offset_right = 230.0
-offset_bottom = 60.0
+offset_left = 39.0
+offset_top = 10.0
+offset_right = 144.0
+offset_bottom = 99.0
 text = "View your salvaging recipes here"
 horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 2
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
