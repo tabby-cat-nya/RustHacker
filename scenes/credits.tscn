@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cix7xfnu1305i"]
+[gd_scene load_steps=44 format=3 uid="uid://cix7xfnu1305i"]
 
 [ext_resource type="Script" uid="uid://4c4k3o0jnmdk" path="res://scenes/menu.gd" id="1_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://b1rs6epjar6mj" path="res://assets/menu.png" id="2_0ctdu"]
@@ -14,6 +14,16 @@
 [ext_resource type="Texture2D" uid="uid://dyft7abnyeqmi" path="res://credits/people/mesmaa.webp" id="12_qbfqv"]
 [ext_resource type="Texture2D" uid="uid://g6xq0gt8dq27" path="res://credits/people/skmojo.webp" id="13_x5q3x"]
 [ext_resource type="Texture2D" uid="uid://cw6ijdxvlrjq2" path="res://credits/people/cookiencream.webp" id="14_nmdnh"]
+[ext_resource type="Texture2D" uid="uid://0rbtmfc2gnk1" path="res://credits/people/codesilver.webp" id="15_sxold"]
+[ext_resource type="Texture2D" uid="uid://cnvy2ke5e3o10" path="res://credits/people/cookie2.webp" id="16_olp7g"]
+[ext_resource type="Texture2D" uid="uid://ew8luvkit28c" path="res://credits/people/eevee.webp" id="17_olp7g"]
+[ext_resource type="Texture2D" uid="uid://ca6q21e5hpqw3" path="res://credits/people/eleanor.webp" id="18_agqj7"]
+[ext_resource type="Texture2D" uid="uid://br7h5684ckr8o" path="res://credits/people/offbytwodev.png" id="19_f3h2w"]
+[ext_resource type="Texture2D" uid="uid://bc1iy6oyxud2r" path="res://credits/people/zobzi.png" id="20_e4uir"]
+[ext_resource type="Texture2D" uid="uid://bho0qkoyms5tt" path="res://credits/people/pixel-robert.png" id="21_4t8yx"]
+[ext_resource type="Texture2D" uid="uid://xtku1tcmtpgd" path="res://credits/people/Dragon's Isle Software.png" id="22_5hxgf"]
+[ext_resource type="Texture2D" uid="uid://bp123ijmb0vhp" path="res://credits/people/DefectiveDev.png" id="23_8t73l"]
+[ext_resource type="Texture2D" uid="uid://cl7kv08matr2o" path="res://credits/people/Playful Crow.png" id="24_u62as"]
 
 [sub_resource type="Resource" id="Resource_7lgdl"]
 script = ExtResource("6_7lgdl")
@@ -83,6 +93,86 @@ metadata/_custom_type_script = "uid://dccraom7a7e8d"
 script = ExtResource("6_7lgdl")
 item_name = "Cookie"
 icon = ExtResource("14_nmdnh")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_f3h2w"]
+script = ExtResource("6_7lgdl")
+item_name = "CodeSilver"
+icon = ExtResource("15_sxold")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_e4uir"]
+script = ExtResource("6_7lgdl")
+item_name = "Cookie 2 Electric Boogaloo#0969"
+icon = ExtResource("16_olp7g")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_g801i"]
+script = ExtResource("6_7lgdl")
+item_name = "EeveeningRain"
+icon = ExtResource("17_olp7g")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_4t8yx"]
+script = ExtResource("6_7lgdl")
+item_name = "Eleanor <3"
+icon = ExtResource("18_agqj7")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_5hxgf"]
+script = ExtResource("6_7lgdl")
+item_name = "OffByTwoDev"
+icon = ExtResource("19_f3h2w")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_8t73l"]
+script = ExtResource("6_7lgdl")
+item_name = "zobzi"
+icon = ExtResource("20_e4uir")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_u62as"]
+script = ExtResource("6_7lgdl")
+item_name = "pixel-robert"
+icon = ExtResource("21_4t8yx")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_gyrtj"]
+script = ExtResource("6_7lgdl")
+item_name = "Dragon's Isle Software"
+icon = ExtResource("22_5hxgf")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_aqilg"]
+script = ExtResource("6_7lgdl")
+item_name = "DefectiveDev"
+icon = ExtResource("23_8t73l")
+custom_panel_style = ExtResource("7_ih6pn")
+buy_value = 0
+metadata/_custom_type_script = "uid://dccraom7a7e8d"
+
+[sub_resource type="Resource" id="Resource_ect1l"]
+script = ExtResource("6_7lgdl")
+item_name = "Playful Crow"
+icon = ExtResource("24_u62as")
 custom_panel_style = ExtResource("7_ih6pn")
 buy_value = 0
 metadata/_custom_type_script = "uid://dccraom7a7e8d"
@@ -225,6 +315,46 @@ item = SubResource("Resource_olp7g")
 [node name="cookiencream" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
 layout_mode = 2
 item = SubResource("Resource_agqj7")
+
+[node name="codesilver" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_f3h2w")
+
+[node name="cookie2" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_e4uir")
+
+[node name="eevee" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_g801i")
+
+[node name="eleanor" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_4t8yx")
+
+[node name="offbytwodev" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_5hxgf")
+
+[node name="zobzi" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_8t73l")
+
+[node name="pixel-robert" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_u62as")
+
+[node name="Dragon\'s Isle Software" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_gyrtj")
+
+[node name="DefectiveDev" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_aqilg")
+
+[node name="Playful Crow" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HFlowContainer2" instance=ExtResource("9_ih6pn")]
+layout_mode = 2
+item = SubResource("Resource_ect1l")
 
 [node name="other" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
 layout_mode = 2
