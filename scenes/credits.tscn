@@ -394,4 +394,5 @@ fit_content = true
 layout_mode = 2
 text = "Back to Menu"
 
+[connection signal="meta_clicked" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/other" to="." method="_on_other_meta_clicked"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
