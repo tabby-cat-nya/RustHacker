@@ -11,3 +11,4 @@ class_name ItemData
 @export var can_buy : bool = false
 @export var description : String = ""
 @export var rarity : String = ""
+@export var sell_icon : bool = false

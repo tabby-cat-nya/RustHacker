@@ -12,4 +12,5 @@ custom_panel_style = ExtResource("1_lhfs3")
 bin_chance = 0
 buy_value = 600
 rarity = "Epic"
+sell_icon = true
 metadata/_custom_type_script = "uid://dccraom7a7e8d"

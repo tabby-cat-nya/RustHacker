@@ -4,6 +4,8 @@ class_name ItemSlot
 @export var icon : TextureRect
 @export var item: ItemData
 @export var label : Label
+@export var botnet_icon : Control
+@export var sell_icon : Control
 var type : String
 var block_taking : bool = false
 const DEFAULT = preload("uid://hgjmkwj0dbqr")
@@ -17,6 +19,8 @@ func update_ui():
 	if not item:
 		icon.texture = null
 		label.text = ""
+		sell_icon.visible = false
+		botnet_icon.visible = false
 		add_theme_stylebox_override("panel",DEFAULT)
 		return
 		
@@ -28,6 +32,8 @@ func update_ui():
 	icon.texture = item.icon
 	#tooltip_text = item.item_name
 	label.text = item.value
+	botnet_icon.visible = item.botnet_power > 0
+	sell_icon.visible = item.sell_icon
 		
 
 
