@@ -18,6 +18,8 @@ var ending_text : String
 
 var power_vis : float = 0
 
+@export var accumlate_labebl :Label
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -29,7 +31,7 @@ func _process(delta: float) -> void:
 	timer_text.text = str(time_left)
 	days_text.text = str(days_left)
 	next_button.disabled = time_left > 10
-	if days_left == 0:
+	if days_left <= 0:
 		next_button.text = "End Game"
 	else: 
 		next_button.text = "Proceed to next day ->"
@@ -48,10 +50,15 @@ func use_time(time : float):
 
 
 func _on_next_day_pressed() -> void:
+	
 	if days_left >= 1:
+		accumulate_botnet()
 		days_left -= 1
 		time_left = 200
 		new_day.emit()
+	elif days_left == 0:
+		accumulate_botnet()
+		days_left = -1
 	else:
 		get_tree().change_scene_to_file("res://scenes/ending.tscn")
 		PlayerInventory.hide()
@@ -59,7 +66,18 @@ func _on_next_day_pressed() -> void:
 		Locations.hide()
 		pass
 
+func accumulate_botnet():
+	for slot in PlayerInventory.inventory_panel.slots:
+		if slot.item:
+			PlayerInventory.botnet_servers += slot.item.botnet_power
+
 func update_power():
+	var active_power : int = 0
+	for slot in PlayerInventory.inventory_panel.slots:
+		if slot.item:
+			active_power += slot.item.botnet_power
+	accumlate_labebl.text = "+" + str(active_power) + " next day"
+	
 	var current_level : HackLevel
 	var next_level : HackLevel
 	for x in range(levels.size()):

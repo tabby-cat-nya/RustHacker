@@ -23,7 +23,7 @@ func _on_play_button_pressed() -> void:
 	PlayerInventory.show()
 	Clock.show()
 	Locations.show()
-	Locations.goto_workshop()
+	Locations.goto_ewaste()
 	#Locations.current_location = Locations.Location.workshop
 	#get_tree().change_scene_to_file("res://scenes/workshop.tscn")
 

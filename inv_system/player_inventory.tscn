@@ -125,9 +125,9 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 241.0
-offset_top = 154.0
+offset_top = 111.0
 offset_right = -635.0
-offset_bottom = -136.0
+offset_bottom = -126.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_hk4hx")
@@ -247,6 +247,21 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ItemSlot30" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+layout_mode = 2
+
+[node name="ItemSlot31" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+layout_mode = 2
+
+[node name="ItemSlot32" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+layout_mode = 2
+
+[node name="ItemSlot33" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+layout_mode = 2
+
+[node name="ItemSlot34" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
+layout_mode = 2
+
+[node name="ItemSlot35" parent="Inventory/MarginContainer/VBoxContainer/ScrollContainer/GridContainer" instance=ExtResource("3_8qgtd")]
 layout_mode = 2
 
 [node name="TabContainer" type="TabContainer" parent="."]

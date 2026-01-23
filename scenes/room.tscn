@@ -99,6 +99,7 @@ text = "Cannot buy: Inventory Full!"
 horizontal_alignment = 1
 
 [node name="BotnetPanel" parent="." instance=ExtResource("5_jxe34")]
+visible = false
 layout_mode = 0
 offset_left = 523.0
 offset_top = 434.0
