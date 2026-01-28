@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bicj8f61mhigk"]
+[gd_scene format=3 uid="uid://bicj8f61mhigk"]
 
 [ext_resource type="StyleBox" uid="uid://hgjmkwj0dbqr" path="res://inv_system/item_panels/default.tres" id="1_lpte7"]
 [ext_resource type="Script" uid="uid://kvxou0qjrhmc" path="res://credits/credit_slot.gd" id="2_katch"]
@@ -8,14 +8,16 @@
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[node name="CreditSlot" type="Panel" node_paths=PackedStringArray("icon", "label")]
+[node name="CreditSlot" type="Panel" unique_id=1909031053 node_paths=PackedStringArray("icon", "label", "botnet_icon", "sell_icon")]
 custom_minimum_size = Vector2(50, 50)
 theme_override_styles/panel = ExtResource("1_lpte7")
 script = ExtResource("2_katch")
 icon = NodePath("Icon")
 label = NodePath("Icon/Label")
+botnet_icon = NodePath("dummy")
+sell_icon = NodePath("dummy")
 
-[node name="Icon" type="TextureRect" parent="."]
+[node name="Icon" type="TextureRect" parent="." unique_id=1356127605]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1
@@ -28,7 +30,7 @@ grow_vertical = 2
 texture = ExtResource("3_0u6ut")
 expand_mode = 3
 
-[node name="Label" type="Label" parent="Icon"]
+[node name="Label" type="Label" parent="Icon" unique_id=1188457195]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -44,6 +46,11 @@ grow_vertical = 0
 text = "meow"
 label_settings = SubResource("LabelSettings_ab1u2")
 horizontal_alignment = 2
+
+[node name="dummy" type="Control" parent="." unique_id=264284925]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

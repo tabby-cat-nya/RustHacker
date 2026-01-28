@@ -45,8 +45,8 @@ func _process(delta: float) -> void:
 func goto_ewaste():
 	selection_indicator.reparent(ewaste_button)
 	selection_indicator.position = Vector2(0,0)
-	if current_location == Location.ewaste:
-		return
+	#if current_location == Location.ewaste:
+		#return
 	current_location = Location.ewaste
 	get_tree().change_scene_to_file("res://scenes/ewaste.tscn")
 
@@ -61,7 +61,7 @@ func goto_workshop():
 func goto_room():
 	selection_indicator.reparent(room_button)
 	selection_indicator.position = Vector2(0,0)
-	if current_location == Location.room:
-		return
+	#if current_location == Location.room:
+		#return
 	current_location = Location.room
 	get_tree().change_scene_to_file("res://scenes/room.tscn")

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxr1ergmn3ij7"]
+[gd_scene format=3 uid="uid://dxr1ergmn3ij7"]
 
 [ext_resource type="Script" uid="uid://4c4k3o0jnmdk" path="res://scenes/menu.gd" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://b1rs6epjar6mj" path="res://assets/menu.png" id="2_con2f"]
 [ext_resource type="Texture2D" uid="uid://bx7x5ufcp3nmt" path="res://assets/logo/game_name.png" id="3_con2f"]
 
-[node name="Menu" type="Control"]
+[node name="Menu" type="Control" unique_id=946585711]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_vjb58")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1195571599]
 z_index = -3
 layout_mode = 1
 anchors_preset = 15
@@ -26,7 +26,7 @@ mouse_filter = 2
 texture = ExtResource("2_con2f")
 expand_mode = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1511744221]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,65 +39,65 @@ theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 250
 theme_override_constants/margin_bottom = 100
 
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer" unique_id=975250671]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer" unique_id=855132638]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer" unique_id=624679420]
 layout_mode = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=43948588]
 custom_minimum_size = Vector2(0, 189.09)
 layout_mode = 2
 texture = ExtResource("3_con2f")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1902968766]
 visible = false
 layout_mode = 2
 bbcode_enabled = true
 text = "[center][font_size=50][wave](title pending)"
 fit_content = true
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=944308179]
 layout_mode = 2
 bbcode_enabled = true
 text = "[wave][color=orchid][center]Made by Tabby"
 fit_content = true
 
-[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=267810087]
 layout_mode = 2
 text = "Your goal is to build a botnet of devices so you can take over the internet with catgirls. You have 7 days to loot the ewaste before building management realises what you're up to and you have to escape"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1578980899]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1836411650]
 layout_mode = 2
 
-[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="PlayButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=457532667]
 modulate = Color(0, 1, 0, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Play!"
 
-[node name="CreditsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="CreditsButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=877999290]
 modulate = Color(1, 0.44313726, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "View Credits"
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=194483359]
 visible = false
 layout_mode = 2
 bbcode_enabled = true
@@ -108,16 +108,16 @@ Octodemy's Inventory Tutorial
 Item Icons: (todo)"
 fit_content = true
 
-[node name="HSeparator2" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1398039320]
 visible = false
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=418071822]
 layout_mode = 2
 text = "tip: you can quickly move items between inventories with Shift+Click"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1948987031]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
